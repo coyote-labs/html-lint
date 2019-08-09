@@ -37,10 +37,10 @@ export function formatError(
       highlightCode: true
     });
   } catch(err) {
-    console.log(err)
+    console.error(err)
   }
 }
 
 export function printTitleForFile(name: string, length: number) {
-  console.log(chalk.bgRed(`[html-lint] ${length} error${length > 1 ? 's' : ''} in ${name}`));
+  console.error(chalk.bgRedBright(`[html-lint] ${length} error${length > 1 ? 's' : ''} in ${name}`));
 }

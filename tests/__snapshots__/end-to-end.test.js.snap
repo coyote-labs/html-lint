@@ -1,0 +1,258 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`html-hint prints errors properly 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "[101m[html-lint] 4 errors in tests/sample-a.html[49m",
+    ],
+    Array [
+      "[90mclass-ad-disabled: Class names should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[39m
+[0m [90m 4 | [39m  [33m<[39m[33m/[39m[33mhead[39m[33m>[39m[0m
+[0m [90m 5 | [39m  [33m<[39m[33mbody[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 6 | [39m    [33m<[39m[33mmain[39m [36mclass[39m[33m=[39m[32m\\"sponsors\\"[39m[33m>[39m[0m
+[0m [90m   | [39m          [31m[1m^[22m[39m [31m[1mClass names should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[22m[39m[0m
+[0m [90m 7 | [39m      [33m<[39m[33mul[39m[33m>[39m[0m
+[0m [90m 8 | [39m        [33m<[39m[33mli[39m id[33m=[39m[32m\\"company-ad\\"[39m[33m>[39m[33mCompany[39m [33mA[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m [90m 9 | [39m        [33m<[39m[33mli[39m id[33m=[39m[32m\\"company-a\\"[39m[33m>[39m[33mCompany[39m [33mB[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90mdoctype-first: HTML files should begin with a \`doctype\`.[39m
+[0m[31m[1m>[22m[39m[90m 1 | [39m[33m<[39m[33mhtml[39m[33m>[39m[0m
+[0m [90m   | [39m[31m[1m^[22m[39m [31m[1mHTML files should begin with a \`doctype\`.[22m[39m[0m
+[0m [90m 2 | [39m  [33m<[39m[33mhead[39m[33m>[39m[0m
+[0m [90m 3 | [39m    [33m<[39m[33mtitle[39m[33m>[39m[33mTest[39m[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[0m
+[0m [90m 4 | [39m  [33m<[39m[33m/[39m[33mhead[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90mid-ad-disabled: IDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[39m
+[0m [90m  6 | [39m    [33m<[39m[33mmain[39m [36mclass[39m[33m=[39m[32m\\"sponsors\\"[39m[33m>[39m[0m
+[0m [90m  7 | [39m      [33m<[39m[33mul[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 | [39m        [33m<[39m[33mli[39m id[33m=[39m[32m\\"company-ad\\"[39m[33m>[39m[33mCompany[39m [33mA[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m [90m    | [39m            [31m[1m^[22m[39m [31m[1mIDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[22m[39m[0m
+[0m [90m  9 | [39m        [33m<[39m[33mli[39m id[33m=[39m[32m\\"company-a\\"[39m[33m>[39m[33mCompany[39m [33mB[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m [90m 10 | [39m      [33m<[39m[33m/[39m[33mul[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33m/[39m[33mmain[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90mid-ad-disabled: IDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[39m
+[0m [90m  7 | [39m      [33m<[39m[33mul[39m[33m>[39m[0m
+[0m [90m  8 | [39m        [33m<[39m[33mli[39m id[33m=[39m[32m\\"company-ad\\"[39m[33m>[39m[33mCompany[39m [33mA[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39m        [33m<[39m[33mli[39m id[33m=[39m[32m\\"company-a\\"[39m[33m>[39m[33mCompany[39m [33mB[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m [90m    | [39m            [31m[1m^[22m[39m [31m[1mIDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[22m[39m[0m
+[0m [90m 10 | [39m      [33m<[39m[33m/[39m[33mul[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33m/[39m[33mmain[39m[33m>[39m[0m
+[0m [90m 12 | [39m  [33m<[39m[33m/[39m[33mbody[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "
+",
+    ],
+    Array [
+      "[101m[html-lint] 2 errors in tests/sample-b.html[49m",
+    ],
+    Array [
+      "[90mid-ad-disabled: IDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[39m
+[0m [90m  5 | [39m  [33m<[39m[33m/[39m[33mhead[39m[33m>[39m[0m
+[0m [90m  6 | [39m  [33m<[39m[33mbody[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  7 | [39m    [33m<[39m[33mP[39m id[33m=[39m[32m\\"ad\\"[39m[33m>[39mwow[33m<[39m[33m/[39m[33mP[39m[33m>[39m[0m
+[0m [90m    | [39m       [31m[1m^[22m[39m [31m[1mIDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[22m[39m[0m
+[0m [90m  8 | [39m    [33m<[39m[33mmain[39m id[33m=[39m[32m\\"asd\\"[39m[33m>[39m[0m
+[0m [90m  9 | [39m      [33m<[39m[33mdiv[39m id[33m=[39m[32m\\"asd\\"[39m[33m>[39m[0m
+[0m [90m 10 | [39m      [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90mid-unique: IDs should be unique[39m
+[0m [90m  7 | [39m    [33m<[39m[33mP[39m id[33m=[39m[32m\\"ad\\"[39m[33m>[39mwow[33m<[39m[33m/[39m[33mP[39m[33m>[39m[0m
+[0m [90m  8 | [39m    [33m<[39m[33mmain[39m id[33m=[39m[32m\\"asd\\"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39m      [33m<[39m[33mdiv[39m id[33m=[39m[32m\\"asd\\"[39m[33m>[39m[0m
+[0m [90m    | [39m           [31m[1m^[22m[39m [31m[1mIDs should be unique[22m[39m[0m
+[0m [90m 10 | [39m      [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33m/[39m[33mmain[39m[33m>[39m[0m
+[0m [90m 12 | [39m  [33m<[39m[33m/[39m[33mbody[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "
+",
+    ],
+    Array [
+      "[101m[html-lint] 4 errors in tests/sample-a.html[49m",
+    ],
+    Array [
+      "[90mclass-ad-disabled: Class names should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[39m
+[0m [90m 4 | [39m  [33m<[39m[33m/[39m[33mhead[39m[33m>[39m[0m
+[0m [90m 5 | [39m  [33m<[39m[33mbody[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 6 | [39m    [33m<[39m[33mmain[39m [36mclass[39m[33m=[39m[32m\\"sponsors\\"[39m[33m>[39m[0m
+[0m [90m   | [39m          [31m[1m^[22m[39m [31m[1mClass names should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[22m[39m[0m
+[0m [90m 7 | [39m      [33m<[39m[33mul[39m[33m>[39m[0m
+[0m [90m 8 | [39m        [33m<[39m[33mli[39m id[33m=[39m[32m\\"company-ad\\"[39m[33m>[39m[33mCompany[39m [33mA[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m [90m 9 | [39m        [33m<[39m[33mli[39m id[33m=[39m[32m\\"company-a\\"[39m[33m>[39m[33mCompany[39m [33mB[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90mdoctype-first: HTML files should begin with a \`doctype\`.[39m
+[0m[31m[1m>[22m[39m[90m 1 | [39m[33m<[39m[33mhtml[39m[33m>[39m[0m
+[0m [90m   | [39m[31m[1m^[22m[39m [31m[1mHTML files should begin with a \`doctype\`.[22m[39m[0m
+[0m [90m 2 | [39m  [33m<[39m[33mhead[39m[33m>[39m[0m
+[0m [90m 3 | [39m    [33m<[39m[33mtitle[39m[33m>[39m[33mTest[39m[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[0m
+[0m [90m 4 | [39m  [33m<[39m[33m/[39m[33mhead[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90mid-ad-disabled: IDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[39m
+[0m [90m  6 | [39m    [33m<[39m[33mmain[39m [36mclass[39m[33m=[39m[32m\\"sponsors\\"[39m[33m>[39m[0m
+[0m [90m  7 | [39m      [33m<[39m[33mul[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 | [39m        [33m<[39m[33mli[39m id[33m=[39m[32m\\"company-ad\\"[39m[33m>[39m[33mCompany[39m [33mA[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m [90m    | [39m            [31m[1m^[22m[39m [31m[1mIDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[22m[39m[0m
+[0m [90m  9 | [39m        [33m<[39m[33mli[39m id[33m=[39m[32m\\"company-a\\"[39m[33m>[39m[33mCompany[39m [33mB[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m [90m 10 | [39m      [33m<[39m[33m/[39m[33mul[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33m/[39m[33mmain[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90mid-ad-disabled: IDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[39m
+[0m [90m  7 | [39m      [33m<[39m[33mul[39m[33m>[39m[0m
+[0m [90m  8 | [39m        [33m<[39m[33mli[39m id[33m=[39m[32m\\"company-ad\\"[39m[33m>[39m[33mCompany[39m [33mA[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39m        [33m<[39m[33mli[39m id[33m=[39m[32m\\"company-a\\"[39m[33m>[39m[33mCompany[39m [33mB[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m [90m    | [39m            [31m[1m^[22m[39m [31m[1mIDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[22m[39m[0m
+[0m [90m 10 | [39m      [33m<[39m[33m/[39m[33mul[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33m/[39m[33mmain[39m[33m>[39m[0m
+[0m [90m 12 | [39m  [33m<[39m[33m/[39m[33mbody[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "
+",
+    ],
+    Array [
+      "[101m[html-lint] 2 errors in tests/sample-b.html[49m",
+    ],
+    Array [
+      "[90mid-ad-disabled: IDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[39m
+[0m [90m  5 | [39m  [33m<[39m[33m/[39m[33mhead[39m[33m>[39m[0m
+[0m [90m  6 | [39m  [33m<[39m[33mbody[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  7 | [39m    [33m<[39m[33mP[39m id[33m=[39m[32m\\"ad\\"[39m[33m>[39mwow[33m<[39m[33m/[39m[33mP[39m[33m>[39m[0m
+[0m [90m    | [39m       [31m[1m^[22m[39m [31m[1mIDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[22m[39m[0m
+[0m [90m  8 | [39m    [33m<[39m[33mmain[39m id[33m=[39m[32m\\"asd\\"[39m[33m>[39m[0m
+[0m [90m  9 | [39m      [33m<[39m[33mdiv[39m id[33m=[39m[32m\\"asd\\"[39m[33m>[39m[0m
+[0m [90m 10 | [39m      [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90mid-unique: IDs should be unique[39m
+[0m [90m  7 | [39m    [33m<[39m[33mP[39m id[33m=[39m[32m\\"ad\\"[39m[33m>[39mwow[33m<[39m[33m/[39m[33mP[39m[33m>[39m[0m
+[0m [90m  8 | [39m    [33m<[39m[33mmain[39m id[33m=[39m[32m\\"asd\\"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39m      [33m<[39m[33mdiv[39m id[33m=[39m[32m\\"asd\\"[39m[33m>[39m[0m
+[0m [90m    | [39m           [31m[1m^[22m[39m [31m[1mIDs should be unique[22m[39m[0m
+[0m [90m 10 | [39m      [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33m/[39m[33mmain[39m[33m>[39m[0m
+[0m [90m 12 | [39m  [33m<[39m[33m/[39m[33mbody[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
