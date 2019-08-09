@@ -2,6 +2,9 @@ const fs = require('fs');
 const reshape = require('reshape');
 const allSettled = require('promise.allsettled');
 
+const { getRules } = require('./dist/utils');
+const { printTitleForFile } = require('./dist/error');
+
 const htmlFiles = [
   {
     contents: fs.readFileSync('./tests/sample-a.html').toString(),
@@ -13,11 +16,6 @@ const htmlFiles = [
   }
 ];
 
-const { DoctypeFirst } = require('./dist/rules/doctype-first');
-const { IdUnique } = require('./dist/rules/id-unique');
-const { IdAdDisabled } = require('./dist/rules/id-ad-disabled');
-const { printTitleForFile } = require('./dist/error');
-
 (async() => {
   const runTimeArgs = {
     errors: []
@@ -26,11 +24,7 @@ const { printTitleForFile } = require('./dist/error');
   try {
     let lint = htmlFiles.map((file) => {
       return reshape({
-        plugins: [
-          new IdAdDisabled().lint,
-          new DoctypeFirst().lint,
-          new IdUnique().lint
-        ],
+        plugins: getRules(),
         fileMeta: {
           name: file.name,
           contents: file.contents.trim()
