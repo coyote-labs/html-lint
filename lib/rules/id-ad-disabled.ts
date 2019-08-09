@@ -4,7 +4,7 @@ export class IdAdDisabled extends BaseRule {
   constructor() {
     super({
       name: 'id-ad-disabled',
-      message: 'IDs should not contain the `ad` keyword to avoid getting flagged by ad blockers.'
+      message: 'IDs should not contain `ad(s)` or `sponsor(s)` to avoid getting flagged by ad blockers.'
     })
   }
 
@@ -16,7 +16,7 @@ export class IdAdDisabled extends BaseRule {
           let {id = []} = attrs;
           id = (id[0] || {});
 
-          if (/(^|[-_])ad([-_]|$)/i.test((id.content || ''))) {
+          if (/(^|[-_])(ad?|sponsors?)([-_]|$)/i.test((id.content || ''))) {
             this.error(id, options);
           }
         }
