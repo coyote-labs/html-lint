@@ -1,4 +1,4 @@
-import BaseRule from './base-rule';
+import { BaseRule, Options } from './base-rule';
 
 export class IdAdDisabled extends BaseRule {
   constructor() {
@@ -8,7 +8,7 @@ export class IdAdDisabled extends BaseRule {
     })
   }
 
-  lint = (ast: any, options: any) =>  {
+  lint = (ast: any, options: Options) =>  {
     if (Array.isArray(ast)) {
       ast.forEach((node) => {
         if (node.attrs) {
