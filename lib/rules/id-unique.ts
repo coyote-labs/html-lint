@@ -1,42 +1,41 @@
-const {formatError} = require('../error');
+import BaseRule from './base-rule';
 
-export function idUnique(ast: any, options: any) {
-  let ids: any;
-  let ruleMeta = {
-    name: 'id-unique',
-    message: 'IDs should be unique'
-  };
-
-  if (!options['idsPresent']) {
-    options.idsPresent = {};
-    ids = {};
-  } else {
-    ids = options.idsPresent
+export class IdUnique extends BaseRule {
+  constructor() {
+    super({
+      name: 'id-unique',
+      message: 'IDs should be unique'
+    })
   }
 
-  if (Array.isArray(ast)) {
-    ast.forEach((node) => {
-      if (node.attrs) {
-        let {attrs} = node;
-        let {id = []} = attrs;
-        id = (id[0] || {});
+  lint = (ast: any, options: any) =>  {
+    let ids: any;
+    if (!options['idsPresent']) {
+      options.idsPresent = {};
+      ids = {};
+    } else {
+      ids = options.idsPresent
+    }
 
-        if (ids[id.content]) {
-          options.runtime.errors.push(formatError(
-            ruleMeta,
-            options.fileMeta,
-            id.location,
-          ));
-        } else {
-          ids[id.content] = true;
+    if (Array.isArray(ast)) {
+      ast.forEach((node) => {
+        if (node.attrs) {
+          let {attrs} = node;
+          let {id = []} = attrs;
+          id = (id[0] || {});
+
+          if (ids[id.content]) {
+            this.error(id, options);
+          } else {
+            ids[id.content] = true;
+          }
         }
-      }
 
-      if (node.content) {
-        idUnique(node.content, options);
-      }
-    });
+        if (node.content) {
+          this.lint(node.content, options);
+        }
+      });
+    }
+    return ast;
   }
-
-  return ast;
 }

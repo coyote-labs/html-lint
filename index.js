@@ -3,20 +3,19 @@ const reshape = require('reshape');
 const allSettled = require('promise.allsettled');
 
 const htmlFiles = [
-  { 
+  {
     contents: fs.readFileSync('./tests/sample-a.html').toString(),
     name: 'tests/sample-a.html'
   },
-  { 
+  {
     contents: fs.readFileSync('./tests/sample-b.html').toString(),
     name: 'tests/sample-b.html'
   }
 ];
 
-const {doctypeFirst} = require('./dist/rules/doctype-first');
-const {idUnique} = require('./dist/rules/id-unique');
-const {idAdDisabled} = require('./dist/rules/id-ad-disabled');
-
+const { DoctypeFirst } = require('./dist/rules/doctype-first');
+const { IdUnique } = require('./dist/rules/id-unique');
+const { IdAdDisabled } = require('./dist/rules/id-ad-disabled');
 (async() => {
   const runTimeArgs = {
     errors: []
@@ -25,7 +24,11 @@ const {idAdDisabled} = require('./dist/rules/id-ad-disabled');
   try {
     let lint = htmlFiles.map((file) => {
       return reshape({
-        plugins: [idAdDisabled, doctypeFirst, idUnique],
+        plugins: [
+          new IdAdDisabled().lint,
+          new DoctypeFirst().lint,
+          new IdUnique().lint
+        ],
         fileMeta: {
           name: file.name,
           contents: file.contents.trim()
