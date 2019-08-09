@@ -1,24 +1,53 @@
 const {formatError} = require('../error');
 
-export default class BaseRule {
-  ruleMeta: any;
+export type RuleMeta = {
+  name: string,
+  message: string
+};
 
-  constructor(meta: any) {
-    this.ruleMeta = {
-      name: meta.name,
-      message: meta.message
-    };
+export type FileMeta = {
+  name: string,
+  contents: string
+};
+
+export interface Options {
+  runtime: {
+    errors: {
+      [index: string]: Array<string>
+    },
+  },
+  idsPresent: {},
+  fileMeta: FileMeta,
+};
+
+export class BaseRule {
+  ruleMeta: RuleMeta;
+
+  constructor(meta: RuleMeta) {
+    this.ruleMeta = Object.assign({}, meta);
   }
 
-  lint = (ast: any, options: any)  => {
+  lint = (ast: any, options: Options) => {
     return ast;
   }
 
-  public error(node: any, options: any) {
-    options.runtime.errors.push(formatError(
+  _getFormattedError = (node: any, options: Options): string => {
+    return formatError(
       this.ruleMeta,
       options.fileMeta,
       node.location
-    ));
+    );
+  } 
+
+  error = (node: any, options: Options) => {
+    let fileName = options.fileMeta.name;
+    let errorsForFile = options.runtime.errors[fileName];
+    if (errorsForFile) {
+      errorsForFile.push(this._getFormattedError(node, options));
+    } else {
+      options.runtime.errors[fileName] = [
+        this._getFormattedError(node, options)
+      ]
+    }
   }
 }

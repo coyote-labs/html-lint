@@ -24,9 +24,9 @@ export function formatError(
   location: location
 ) {
   try {
-    return `${chalk.bgRed('[html-lint] error')} in ${fileMeta.name}` +
-      chalk.gray(`(${ruleMeta.name})`) +
-      '\n\n' +
+    return chalk.gray(
+      `${ruleMeta.name}: ` + ruleMeta.message) +
+      '\n' +
       codeFrameColumns(fileMeta.contents, {
       start: {
         line: location.line,
@@ -39,4 +39,8 @@ export function formatError(
   } catch(err) {
     console.log(err)
   }
+}
+
+export function printTitleForFile(name: string, length: number) {
+  console.log(chalk.bgRed(`[html-lint] ${length} error${length > 1 ? 's' : ''} in ${name}`));
 }

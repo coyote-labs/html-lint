@@ -16,6 +16,8 @@ const htmlFiles = [
 const { DoctypeFirst } = require('./dist/rules/doctype-first');
 const { IdUnique } = require('./dist/rules/id-unique');
 const { IdAdDisabled } = require('./dist/rules/id-ad-disabled');
+const { printTitleForFile } = require('./dist/error');
+
 (async() => {
   const runTimeArgs = {
     errors: []
@@ -39,8 +41,12 @@ const { IdAdDisabled } = require('./dist/rules/id-ad-disabled');
 
     await allSettled(lint);
     let { errors } = runTimeArgs;
-    errors.forEach((error) => {
-      console.log(error);
+
+    let files = Object.keys(errors);
+    files.forEach((file) => {
+      let fileErrors = errors[file];
+      printTitleForFile(file, fileErrors.length);
+      fileErrors.forEach(error => console.log(error, '\n'));
       console.log('\n');
     });
 

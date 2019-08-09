@@ -1,4 +1,4 @@
-import BaseRule from './base-rule';
+import { BaseRule, Options } from './base-rule';
 
 export class IdUnique extends BaseRule {
   constructor() {
@@ -8,7 +8,7 @@ export class IdUnique extends BaseRule {
     })
   }
 
-  lint = (ast: any, options: any) =>  {
+  lint = (ast: any, options: Options) =>  {
     let ids: any;
     if (!options['idsPresent']) {
       options.idsPresent = {};
