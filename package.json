@@ -4,9 +4,10 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
+    "clean": "rm -rf dist",
+    "build": "npm run clean && tsc",
     "prepare": "npm run build",
-    "build": "tsc",
-    "test": "jest"
+    "test": "npm run build && jest"
   },
   "dependencies": {
     "@babel/code-frame": "^7.5.5",
