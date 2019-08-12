@@ -41,6 +41,23 @@ export function formatError(
   }
 }
 
-export function printTitleForFile(name: string, length: number) {
+function printTitleForFile(name: string, length: number) {
   console.error(chalk.bgRedBright(`[html-lint] ${length} error${length > 1 ? 's' : ''} in ${name}`));
+}
+
+export function printErrors(errors: any) {
+  let files = Object.keys(errors);
+  files.forEach((file) => {
+    let fileErrors = errors[file];
+    printTitleForFile(file, fileErrors.length);
+    fileErrors.forEach((error: string) => console.error(error, '\n'));
+    console.error('\n');
+  });
+}
+
+export function handleExit(errors: any) {
+  let files = Object.keys(errors);
+  if (files.length) {
+    throw new Error(chalk.red('html-lint failed.'));
+  }
 }

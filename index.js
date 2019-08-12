@@ -1,9 +1,8 @@
 const reshape = require('reshape');
 const allSettled = require('promise.allsettled');
-const chalk = require('chalk');
 
 const { getRules } = require('./dist/utils');
-const { printTitleForFile } = require('./dist/error');
+const { printErrors, handleExit } = require('./dist/error');
 
 module.exports = async function(htmlFiles) {
   const runTimeArgs = {
@@ -23,16 +22,7 @@ module.exports = async function(htmlFiles) {
   
   await allSettled(lint);
   let { errors } = runTimeArgs;
-  
-  let files = Object.keys(errors);
-  files.forEach((file) => {
-    let fileErrors = errors[file];
-    printTitleForFile(file, fileErrors.length);
-    fileErrors.forEach(error => console.error(error, '\n'));
-    console.error('\n');
-  });
 
-  if (files.length) {
-    throw new Error(chalk.red('html-lint failed.'));
-  }
+  printErrors(errors);
+  handleExit(errors);
 }
