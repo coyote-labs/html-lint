@@ -17,7 +17,7 @@ export class IdAdDisabled extends BaseRule {
           id = (id[0] || {});
 
           if (/(^|[-_])(ad?|sponsors?)([-_]|$)/i.test((id.content || ''))) {
-            this.error(id, options);
+            this.violation(id, options);
           }
         }
 

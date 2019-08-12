@@ -2,13 +2,13 @@ const reshape = require('reshape');
 const allSettled = require('promise.allsettled');
 
 const { getRules } = require('./dist/utils');
-const { printErrors, handleExit } = require('./dist/error');
+const { printViolations, handleExit } = require('./dist/error');
 
-module.exports = async function(htmlFiles) {
+module.exports = async function(htmlFiles, config) {
   const runTimeArgs = {
-    errors: []
+    violations: {}
   };
-  
+
   let lint = htmlFiles.map((file) => {
     return reshape({
       plugins: getRules(),
@@ -19,10 +19,11 @@ module.exports = async function(htmlFiles) {
       runtime: runTimeArgs
     }).process(file.contents.trim());
   });
-  
-  await allSettled(lint);
-  let { errors } = runTimeArgs;
 
-  printErrors(errors);
-  handleExit(errors);
+  await allSettled(lint);
+
+  let { violations  } = runTimeArgs;
+
+  printViolations(violations);
+  handleExit(violations);
 }

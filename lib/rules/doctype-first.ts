@@ -23,7 +23,7 @@ export class DoctypeFirst extends BaseRule {
         }
 
         if (!skippableTypes.includes(currentNodeType)) {
-          this.error(currentNode, options);
+          this.violation(currentNode, options);
         }
 
       }
