@@ -4,7 +4,7 @@ exports[`global config - ignore some rules html-lint throws when a few rules are
 [MockFunction warn] {
   "calls": Array [
     Array [
-      "[43m[html-lint] 1 warning in tests/sample-a.html[49m",
+      "[43m[30m[html-lint] 1 warning in tests/sample-a.html[39m[49m",
     ],
     Array [
       "[90mdoctype-first: HTML files should begin with a \`doctype\`.[39m

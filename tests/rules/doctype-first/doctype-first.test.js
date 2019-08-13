@@ -6,10 +6,10 @@ global.console = {
 };
 
 test.each([
-  'doctype-first/no-error.html',
-  'doctype-first/no-error-leading-comments.html',
-  'doctype-first/error-no-doctype.html',
-  'doctype-first/error-no-doctype-leading-comments'
+  'rules/doctype-first/no-error.html',
+  'rules/doctype-first/no-error-leading-comments.html',
+  'rules/doctype-first/error-no-doctype.html',
+  'rules/doctype-first/error-no-doctype-leading-comments'
 ])(
   'doctype-first %s',
   async(fixture) => {

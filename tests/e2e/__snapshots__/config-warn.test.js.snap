@@ -4,7 +4,7 @@ exports[`global config - warn all rules html-lint does not throw when rules are 
 [MockFunction warn] {
   "calls": Array [
     Array [
-      "[43m[html-lint] 4 warnings in tests/sample-a.html[49m",
+      "[43m[30m[html-lint] 4 warnings in tests/sample-a.html[39m[49m",
     ],
     Array [
       "[90mclass-ad-disabled: Class names should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[39m
@@ -57,7 +57,7 @@ exports[`global config - warn all rules html-lint does not throw when rules are 
 ",
     ],
     Array [
-      "[43m[html-lint] 2 warnings in tests/sample-b.html[49m",
+      "[43m[30m[html-lint] 2 warnings in tests/sample-b.html[39m[49m",
     ],
     Array [
       "[90mid-ad-disabled: IDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[39m
