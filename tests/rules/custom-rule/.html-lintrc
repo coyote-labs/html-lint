@@ -1,0 +1,8 @@
+{
+  "customRules" : {
+    "dir": "tests/rules/custom-rule/customRules",
+    "rules": {
+      "src-not-empty": "warn"
+    }
+  }
+}

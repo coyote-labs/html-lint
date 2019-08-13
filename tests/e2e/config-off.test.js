@@ -24,7 +24,7 @@ describe('global config - ignore all rules', () => {
     jest.resetModules();
 
     let rules = getRulesList();
-    rules.forEach(rule => global.process.env[rule] = 'off');
+    rules.forEach(rule => global.process.env[rule.name] = 'off');
   });
 
   test('html-lint does not throw when all rules are set to off', async () => {
@@ -36,6 +36,6 @@ describe('global config - ignore all rules', () => {
 
   afterEach(() => {
     let rules = getRulesList();
-    rules.forEach(rule => global.process.env[rule] = 'error');
+    rules.forEach(rule => global.process.env[rule.name] = 'error');
   });
 });

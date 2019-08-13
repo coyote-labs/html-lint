@@ -1,15 +1,15 @@
 const lint = require('../../../index');
-const { getFileMeta } = require('../../utils');
+const { getFileMeta } = require('../../../dist/utils');
 
 global.console = {
   error: jest.fn()
 };
 
 test.each([
-  'rules/doctype-first/no-error.html',
-  'rules/doctype-first/no-error-leading-comments.html',
-  'rules/doctype-first/error-no-doctype.html',
-  'rules/doctype-first/error-no-doctype-leading-comments'
+  'tests/rules/doctype-first/no-error.html',
+  'tests/rules/doctype-first/no-error-leading-comments.html',
+  'tests/rules/doctype-first/error-no-doctype.html',
+  'tests/rules/doctype-first/error-no-doctype-leading-comments'
 ])(
   'doctype-first %s',
   async(fixture) => {

@@ -22,12 +22,13 @@ export class IdUnique extends BaseRule {
         if (node.attrs) {
           let {attrs} = node;
           let {id = []} = attrs;
-          id = (id[0] || {});
-
-          if (ids[id.content]) {
-            this.violation(id, options);
-          } else {
-            ids[id.content] = true;
+          id = id[0];
+          if (id) {
+            if (ids[id.content]) {
+              this.violation(id, options);
+            } else {
+              ids[id.content] = true;
+            }
           }
         }
 

@@ -24,7 +24,7 @@ describe('global config - warn all rules', () => {
     jest.resetModules();
 
     let rules = getRulesList();
-    rules.forEach(rule => global.process.env[rule] = 'warn');
+    rules.forEach(rule => global.process.env[rule.name] = 'warn');
   });
 
   test('html-lint does not throw when rules are set to warn', async () => {
@@ -37,6 +37,6 @@ describe('global config - warn all rules', () => {
 
   afterEach(() => {
     let rules = getRulesList();
-    rules.forEach(rule => global.process.env[rule] = 'off');
+    rules.forEach(rule => global.process.env[rule.name] = 'off');
   });
 });
