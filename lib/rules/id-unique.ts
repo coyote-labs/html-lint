@@ -25,7 +25,7 @@ export class IdUnique extends BaseRule {
           id = (id[0] || {});
 
           if (ids[id.content]) {
-            this.error(id, options);
+            this.violation(id, options);
           } else {
             ids[id.content] = true;
           }

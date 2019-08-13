@@ -20,7 +20,7 @@ export class ClassAdDisabled extends BaseRule {
             if (
               /(^|[-_])(ad?|sponsors?)([-_]|$)/i.test(className)
             ) {
-              this.error(classAttr, options);
+              this.violation(classAttr, options);
             }
           });
         }

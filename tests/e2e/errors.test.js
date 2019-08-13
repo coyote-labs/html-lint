@@ -1,5 +1,6 @@
 const fs = require('fs');
-const lint = require('../index');
+const lint = require('../../index');
+const { getRulesList } = require('../../dist/utils');
 
 const htmlFiles = [
   {
@@ -13,23 +14,18 @@ const htmlFiles = [
 ];
 
 global.console = {
-  error: jest.fn()
+  error: jest.fn().mockName('error'),
+  warn: jest.fn().mockName('warn'),
+  log: jest.fn().mockName('log')
 };
 
-test('html-hint throws on errors', async () => {
-  expect.assertions(1);
+test('html-lint throws on errors', async () => {
+  expect.hasAssertions();
 
   try {
     await lint(htmlFiles);
   } catch ({ message }) {
     expect(message).toMatch('html-lint failed.');
-  }
-});
-
-test('html-hint prints errors properly', async () => {
-  try {
-    await lint(htmlFiles);
-  } catch ({ message }) {
     expect(global.console.error).toMatchSnapshot();
   }
 });

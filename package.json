@@ -12,11 +12,14 @@
   "dependencies": {
     "@babel/code-frame": "^7.5.5",
     "chalk": "^2.4.2",
+    "cosmiconfig": "^5.2.1",
     "promise.allsettled": "^1.0.1",
     "reshape": "^1.0.1",
     "typescript": "^3.5.3"
   },
   "devDependencies": {
+    "@types/babel__code-frame": "^7.0.1",
+    "@types/cosmiconfig": "^5.0.3",
     "@types/node": "^12.7.1",
     "jest": "^24.8.0"
   }

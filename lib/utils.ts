@@ -3,7 +3,9 @@ import * as path from 'path';
 
 import { BaseRule } from './rules/base-rule';
 
-export function toCamelCase(str: string): string {
+const rulesDir = path.join(__dirname, 'rules');
+
+export function toPascalCase(str: string): string {
   let camelised = str.replace(/-([a-z])/g, function (match, word) {
     return word.toUpperCase();
   });
@@ -11,17 +13,23 @@ export function toCamelCase(str: string): string {
   return camelised.replace(/^./, camelised[0].toUpperCase());
 }
 
-export function getRules(): Array<BaseRule> {
-  const rulesDir = path.join(__dirname, 'rules');
-  const rules = fs.readdirSync(rulesDir).filter((rule) => {
+export function toKebabCase(str: string): string {
+  return str.split(/(?=[A-Z])/).join('-').toLowerCase();
+}
+
+export function getRulesList(): Array<string> {
+  let rules = fs.readdirSync(rulesDir).filter((rule) => {
     return path.extname(rule) === '.js' && !rule.includes('base-rule');
   });
 
-  const plugins = rules.map((ruleFile) => {
-    let ruleName = toCamelCase(path.parse(ruleFile).name);
-    let rulePath = path.join(rulesDir, ruleFile);
+  return rules.map((ruleFile) => path.parse(ruleFile).name);
+}
 
-    let rule = require(rulePath)[ruleName];
+export function getRules(): Array<BaseRule> {
+  const rules = getRulesList();
+  const plugins = rules.map((ruleName) => {
+    let rulePath = path.join(rulesDir, ruleName);
+    let rule = require(rulePath)[toPascalCase(ruleName)];
     return new rule().lint;
   });
 
