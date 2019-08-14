@@ -2,11 +2,12 @@ const reshape = require('reshape');
 const allSettled = require('promise.allsettled');
 
 const { getRules } = require('./dist/utils');
-const { printViolations, handleExit } = require('./dist/error');
+const { report } = require('./dist/error');
 
-module.exports = async function(htmlFiles, config) {
+module.exports = async function(htmlFiles) {
   const runTimeArgs = {
-    violations: {}
+    violations: {},
+    htmlLintConfig: {}
   };
 
   let lint = htmlFiles.map((file) => {
@@ -22,8 +23,5 @@ module.exports = async function(htmlFiles, config) {
 
   await allSettled(lint);
 
-  let { violations  } = runTimeArgs;
-
-  printViolations(violations);
-  handleExit(violations);
+  report(runTimeArgs);
 }

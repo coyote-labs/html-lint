@@ -21,7 +21,14 @@ export interface Options {
     violations: {
       [index: string]: {
         errors: Array<string>,
-        warnings: Array<string>
+        warnings: Array<string>,
+        ignored: Array<string>
+      }
+    },
+    htmlLintConfig: {
+      // fileName: { rule: value }
+      [index: string]: {
+        [index: string]: ErrorLevel
       }
     }
   },
@@ -100,22 +107,25 @@ export class BaseRule {
   violation = (node: any, options: Options) => {
     let fileName = options.fileMeta.name;
 
-    if (this.shouldIgnore()) {
-      return;
-    }
-
     let violationsForFile = options.runtime.violations[fileName];
     if (!violationsForFile) {
       options.runtime.violations[fileName] = {
         errors: [],
-        warnings: []
+        warnings: [],
+        ignored: []
       };
       violationsForFile = options.runtime.violations[fileName];
     }
 
-    let violations = this.shouldError() ?
-      violationsForFile.errors :
-      violationsForFile.warnings;
+    let violations;
+
+    if (this.shouldIgnore()) {
+      violations = violationsForFile.ignored;
+    } else {
+      violations = this.shouldError() ?
+        violationsForFile.errors :
+        violationsForFile.warnings;
+    }
 
     violations.push(this._getFormattedViolation(node, options));
   }

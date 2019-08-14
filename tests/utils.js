@@ -2,7 +2,7 @@ const fs = require('fs');
 
 function getFileMeta(fixture) {
   return {
-    contents: fs.readFileSync(`./tests/rules/${fixture}`).toString(),
+    contents: fs.readFileSync(`./tests/${fixture}`).toString(),
     name: fixture
   };
 }
