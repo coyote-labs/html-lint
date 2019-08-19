@@ -1,4 +1,3 @@
-// import { BaseRule } from 'html-lint/BaseRule';
 const { BaseRule } = require('html-lint/dist/rules/base-rule')
 
 class SrcNotEmpty extends BaseRule {
