@@ -16,13 +16,15 @@ export class ClassAdDisabled extends BaseRule {
           let classAttr = attrs.class || [];
           classAttr = classAttr[0] || {};
           let classNames = (classAttr.content || '').split(' ');
-          classNames.forEach((className: string) => {
-            if (
-              /(^|[-_])(ad?|sponsors?)([-_]|$)/i.test(className)
-            ) {
-              this.violation(classAttr, options);
-            }
-          });
+          if (classNames.length) {
+            classNames.forEach((className: string) => {
+              if (
+                /(^|[-_])(ads?|sponsors?)([-_]|$)/i.test(className)
+              ) {
+                this.violation(classAttr, options);
+              }
+            });
+          }
         }
   
         if (node.content) {

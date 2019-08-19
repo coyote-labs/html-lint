@@ -14,10 +14,12 @@ export class IdAdDisabled extends BaseRule {
         if (node.attrs) {
           let {attrs} = node;
           let {id = []} = attrs;
-          id = (id[0] || {});
+          if (id.length) {
+            id = id[0];
 
-          if (/(^|[-_])(ad?|sponsors?)([-_]|$)/i.test((id.content || ''))) {
-            this.violation(id, options);
+            if (/(^|[-_])(ads?|sponsors?)([-_]|$)/i.test((id.content || ''))) {
+              this.violation(id, options);
+            }
           }
         }
 
