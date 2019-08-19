@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`doctype-first rules/doctype-first/error-no-doctype.html 1`] = `
+exports[`doctype-first tests/rules/doctype-first/error-no-doctype.html 1`] = `
 [MockFunction] {
   "calls": Array [
     Array [
-      "[101m[html-lint] 1 error in rules/doctype-first/error-no-doctype.html[49m",
+      "[101m[html-lint] 1 error in tests/rules/doctype-first/error-no-doctype.html[49m",
     ],
     Array [
       "[90mdoctype-first: HTML files should begin with a \`doctype\`.[39m
@@ -35,11 +35,11 @@ exports[`doctype-first rules/doctype-first/error-no-doctype.html 1`] = `
 }
 `;
 
-exports[`doctype-first rules/doctype-first/error-no-doctype-leading-comments 1`] = `
+exports[`doctype-first tests/rules/doctype-first/error-no-doctype-leading-comments 1`] = `
 [MockFunction] {
   "calls": Array [
     Array [
-      "[101m[html-lint] 1 error in rules/doctype-first/error-no-doctype.html[49m",
+      "[101m[html-lint] 1 error in tests/rules/doctype-first/error-no-doctype.html[49m",
     ],
     Array [
       "[90mdoctype-first: HTML files should begin with a \`doctype\`.[39m

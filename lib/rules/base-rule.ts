@@ -52,20 +52,22 @@ function getConfigFromEnv(rule: string): ErrorLevel {
 
 // load project level configuration
 let { config } = (cosmiconfig('html-lint').searchSync() || { config: {} });
+let { customRules = {} } = config;
 let defaultErrorLevel: ErrorLevel = 'error';
 let defaultConfig: Config = {};
 
 let rules = getRulesList();
 rules.forEach((rule) => {
-  defaultConfig[rule] = defaultErrorLevel;
+  let { name } = rule;
+  defaultConfig[name] = defaultErrorLevel;
 
-  let configInEnv = getConfigFromEnv(rule);
+  let configInEnv = getConfigFromEnv(name);
   if (configInEnv) {
-    defaultConfig[rule] = configInEnv;
+    defaultConfig[name] = configInEnv;
   }
 });
 
-config = Object.assign(defaultConfig, config);
+config = Object.assign(defaultConfig, config, customRules.rules);
 
 export class BaseRule {
   ruleMeta: RuleMeta;
@@ -102,7 +104,7 @@ export class BaseRule {
       options.fileMeta,
       node.location
     );
-  } 
+  }
 
   violation = (node: any, options: Options) => {
     let fileName = options.fileMeta.name;

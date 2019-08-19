@@ -18,7 +18,7 @@ global.console = {
   warn: jest.fn().mockName('warn'),
   log: jest.fn().mockName('log')
 };
-  
+
 describe('global config - ignore some rules', () => {
   beforeEach(() => {
     jest.resetModules();
