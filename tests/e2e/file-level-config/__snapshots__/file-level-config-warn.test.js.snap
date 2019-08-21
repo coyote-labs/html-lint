@@ -6,7 +6,7 @@ exports[`file-level-config warn 2`] = `
 [MockFunction warn] {
   "calls": Array [
     Array [
-      "[43m[30m[html-lint] 3 warnings in e2e/file-level-config/fixtures/warn.html[39m[49m",
+      "[43m[30m[html-lint] 3 warnings in tests/e2e/file-level-config/fixtures/warn.html[39m[49m",
     ],
     Array [
       "[90mid-ad-disabled: IDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[39m

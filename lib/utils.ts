@@ -1,6 +1,7 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
+import chalk from 'chalk';
 import * as cosmiconfig from 'cosmiconfig';
 
 import { BaseRule } from './rules/base-rule';
@@ -66,10 +67,10 @@ export function getRules(): Array<BaseRule> {
   return plugins;
 }
 
-export function getFileMeta(fixture: string) {
-  const ruleDir = path.join(process.cwd(), fixture);
-  return {
-    contents: fs.readFileSync(ruleDir).toString(),
-    name: fixture
-  };
+export function printUsage() {
+  let message = `${chalk.bgRedBright('[html-lint] Invalid arguments passed.')}`;
+  let usage = `${chalk.bgCyan(chalk.black('Usage'))} html-lint glob`;
+  console.error(message, '\n');
+  console.error(usage);
+  process.exit(1);
 }
