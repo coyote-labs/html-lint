@@ -21,13 +21,15 @@ export class IdUnique extends BaseRule {
       ast.forEach((node) => {
         if (node.attrs) {
           let {attrs} = node;
-          let {id = []} = attrs;
-          id = id[0];
-          if (id) {
-            if (ids[id.content]) {
-              this.violation(id, options);
-            } else {
-              ids[id.content] = true;
+          let {id} = attrs;
+          if (Array.isArray(id)) {
+            id = id[0];
+            if (id) {
+              if (ids[id.content]) {
+                this.violation(id, options);
+              } else {
+                ids[id.content] = true;
+              }
             }
           }
         }
