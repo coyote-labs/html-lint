@@ -1,5 +1,4 @@
 const lint = require('../../../index');
-const { getFileMeta } = require('../../../dist/utils');
 
 global.console = {
   error: jest.fn()
@@ -14,7 +13,7 @@ test.each([
   'doctype-first %s',
   async(fixture) => {
     try {
-      await lint([getFileMeta(fixture)]);
+      await lint(fixture);
     } catch ({ message }) {
       expect(global.console.error).toMatchSnapshot();
     }

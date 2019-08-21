@@ -1,17 +1,5 @@
-const fs = require('fs');
 const lint = require('../../index');
 const { getRulesList } = require('../../dist/utils');
-
-const htmlFiles = [
-  {
-    contents: fs.readFileSync('./tests/sample-a.html').toString(),
-    name: 'tests/sample-a.html'
-  },
-  {
-    contents: fs.readFileSync('./tests/sample-b.html').toString(),
-    name: 'tests/sample-b.html'
-  }
-];
 
 global.console = {
   error: jest.fn().mockName('error'),
@@ -28,7 +16,7 @@ describe('global config - warn all rules', () => {
   });
 
   test('html-lint does not throw when rules are set to warn', async () => {
-    await lint(htmlFiles);
+    await lint('tests/sample*.html');
     expect(global.console.warn).toHaveBeenCalled();
     expect(global.console.warn).toMatchSnapshot();
     expect(global.console.log).not.toHaveBeenCalled();

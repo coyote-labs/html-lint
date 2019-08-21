@@ -1,5 +1,3 @@
-const { getFileMeta } = require('../../utils.js');
-
 global.console = {
   error: jest.fn().mockName('error'),
   warn: jest.fn().mockName('warn'),
@@ -16,7 +14,7 @@ describe('file-level-config', () => {
 
     try {
       const lint = require('../../../index');
-      await lint([getFileMeta('e2e/file-level-config/fixtures/mixed.html')]);
+      await lint('tests/e2e/file-level-config/fixtures/mixed.html');
     } catch ({ message }) {
       expect(global.console.error).toMatchSnapshot();
       expect(global.console.warn).toMatchSnapshot();

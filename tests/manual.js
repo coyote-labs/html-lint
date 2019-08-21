@@ -1,16 +1,4 @@
-const fs = require('fs');
 const lint = require('../index');
-
-const htmlFiles = [
-  {
-    contents: fs.readFileSync('./tests/sample-a.html').toString(),
-    name: 'tests/sample-a.html'
-  },
-  {
-    contents: fs.readFileSync('./tests/sample-b.html').toString(),
-    name: 'tests/sample-b.html'
-  }
-];
 
 (async() => {
   try {
@@ -18,7 +6,7 @@ const htmlFiles = [
     process.env['id-ad-disabled'] = 'off';
     process.env['doctype-first'] = 'warn';
     process.env['id-unique'] = 'warn';
-    await lint(htmlFiles);
+    await lint('tests/sample-*.html');
   } catch (error) {
     console.log(error)
   }
