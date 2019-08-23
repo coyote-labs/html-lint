@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 
 const args = require('minimist')(process.argv.slice(2));
-const lint = require('../index');
+const { htmlLint } = require('../index');
 
 (async() => {
   // When invoked as `html-lint **/*.html`, argv will already have the
@@ -12,7 +12,7 @@ const lint = require('../index');
   }
 
   try {
-    await lint(htmlFiles);
+    await htmlLint(htmlFiles);
   } catch (error) {
     console.error(error);
     process.exit(1);

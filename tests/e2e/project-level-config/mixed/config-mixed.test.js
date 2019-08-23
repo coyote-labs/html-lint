@@ -1,4 +1,4 @@
-const lint = require('../../index');
+const { htmlLint } = require('../../../../index');
 
 global.console = {
   error: jest.fn().mockName('error'),
@@ -9,16 +9,13 @@ global.console = {
 describe('global config - ignore some rules', () => {
   beforeEach(() => {
     jest.resetModules();
-
-    process.env['doctype-first'] = 'warn';
-    process.env['class-ad-disabled'] = 'off';
   });
 
   test('html-lint throws when a few rules are set to error', async () => {
     expect.hasAssertions();
 
     try {
-      await lint('tests/sample*.html');
+      await htmlLint('tests/sample*.html', __dirname);
     } catch({ message }) {
       expect(global.console.warn).toHaveBeenCalled();
       expect(global.console.error).toHaveBeenCalled();
@@ -28,10 +25,5 @@ describe('global config - ignore some rules', () => {
 
       expect(global.console.log).not.toHaveBeenCalled();
     }
-  });
-
-  afterEach(() => {
-    process.env['doctype-first'] = 'error';
-    process.env['class-ad-disabled'] = 'error';
   });
 });

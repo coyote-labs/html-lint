@@ -30,10 +30,11 @@ export interface Options {
       [index: string]: {
         [index: string]: ErrorLevel
       }
-    }
+    },
+    configPath: string
   },
   idsPresent: {},
-  fileMeta: FileMeta,
+  fileMeta: FileMeta
 };
 
 export interface Config {
@@ -43,36 +44,27 @@ export interface Config {
 declare var process : {
   env: {
     [index: string]: ErrorLevel
-  }
+  },
+  cwd: Function
 }
-
-function getConfigFromEnv(rule: string): ErrorLevel {
-  return process.env[rule];
-}
-
-// load project level configuration
-let { config } = (cosmiconfig('html-lint').searchSync() || { config: {} });
-let { customRules = {} } = config;
-let defaultErrorLevel: ErrorLevel = 'error';
-let defaultConfig: Config = {};
-
-let rules = getRulesList();
-rules.forEach((rule) => {
-  let { name } = rule;
-  defaultConfig[name] = defaultErrorLevel;
-
-  let configInEnv = getConfigFromEnv(name);
-  if (configInEnv) {
-    defaultConfig[name] = configInEnv;
-  }
-});
-
-config = Object.assign(defaultConfig, config, customRules.rules);
 
 export class BaseRule {
   ruleMeta: RuleMeta;
 
-  constructor(meta: RuleMeta) {
+  constructor(meta: RuleMeta, configPath: string = process.cwd()) {
+    // load project level configuration
+    let { config } = (cosmiconfig('html-lint').searchSync(configPath) || { config: {} });
+    let { customRules = {} } = config;
+    let defaultErrorLevel: ErrorLevel = 'error';
+    let defaultConfig: Config = {};
+
+    let rules = getRulesList(configPath);
+    rules.forEach((rule) => {
+      let { name } = rule;
+      defaultConfig[name] = defaultErrorLevel;
+    });
+
+    config = Object.assign(defaultConfig, config, customRules.rules);
     this.ruleMeta = Object.assign({
       level: config[meta.name]
     }, meta);
@@ -120,7 +112,6 @@ export class BaseRule {
     }
 
     let violations;
-
     if (this.shouldIgnore()) {
       violations = violationsForFile.ignored;
     } else {

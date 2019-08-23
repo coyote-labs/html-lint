@@ -1,11 +1,11 @@
-const { BaseRule } = require('html-lint/dist/rules/base-rule')
+const { BaseRule } = require('../../../../dist/rules/base-rule');
 
 class SrcNotEmpty extends BaseRule {
-  constructor() {
+  constructor(options) {
     super({
       name: 'src-not-empty',
       message: 'Src attribute should not be empty.'
-    });
+    }, options);
 
     this.lint = (ast, options) => {
       if (Array.isArray(ast)) {

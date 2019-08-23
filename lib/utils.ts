@@ -26,14 +26,13 @@ export function toKebabCase(str: string): string {
   return str.split(/(?=[A-Z])/).join('-').toLowerCase();
 }
 
-export function getRulesList(): Array<RuleDetails> {
+export function getRulesList(configPath: string): Array<RuleDetails> {
   let customRuleNames:Array<string> = [];
 
-  const { config } = (cosmiconfig('html-lint').searchSync() || { config: {} });
-
+  const { config } = (cosmiconfig('html-lint').searchSync(configPath) || { config: {} });
   const customRulesDir = config.customRules ? config.customRules.dir : 'html-lint';
 
-  if(config.customRules) {
+  if (config.customRules) {
     customRuleNames =  Object.keys(config.customRules.rules);
   }
 
@@ -57,11 +56,12 @@ export function getRulesList(): Array<RuleDetails> {
   });
 }
 
-export function getRules(): Array<BaseRule> {
-  const rules = getRulesList();
+export function getRules(runTimeArgs: any): Array<BaseRule> {
+  const configPath = runTimeArgs.configPath;
+  const rules = getRulesList(configPath);
   const plugins = rules.map((ruleDetails) => {
     let rule = require(ruleDetails.path)[toPascalCase(ruleDetails.name)];
-    return new rule().lint;
+    return new rule(configPath).lint;
   });
 
   return plugins;

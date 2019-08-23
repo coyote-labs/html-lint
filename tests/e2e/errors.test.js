@@ -1,5 +1,4 @@
-const lint = require('../../index');
-const { getRulesList } = require('../../dist/utils');
+const { htmlLint } = require('../../index');
 
 global.console = {
   error: jest.fn().mockName('error'),
@@ -11,7 +10,7 @@ test('html-lint throws on errors', async () => {
   expect.hasAssertions();
 
   try {
-    await lint('tests/sample*.html');
+    await htmlLint('tests/sample*.html');
   } catch ({ message }) {
     expect(message).toMatch('html-lint failed.');
     expect(global.console.error).toMatchSnapshot();
