@@ -1,11 +1,11 @@
 import { BaseRule, Options } from './base-rule';
 
 export class DoctypeFirst extends BaseRule {
-  constructor() {
+  constructor(options: any) {
     super({
       name: 'doctype-first',
       message: 'HTML files should begin with a `doctype`.'
-    })
+    }, options);
   }
 
   lint = (ast: any, options: Options) =>  {

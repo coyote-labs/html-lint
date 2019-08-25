@@ -1,5 +1,4 @@
-const lint = require('../../index');
-const { getRulesList } = require('../../dist/utils');
+const { htmlLint } = require('../../../../index');
 
 global.console = {
   error: jest.fn().mockName('error'),
@@ -10,20 +9,12 @@ global.console = {
 describe('global config - ignore all rules', () => {
   beforeEach(() => {
     jest.resetModules();
-
-    let rules = getRulesList();
-    rules.forEach(rule => global.process.env[rule.name] = 'off');
   });
 
   test('html-lint does not throw when all rules are set to off', async () => {
-    await lint('tests/sample*.html');
+    await htmlLint('tests/sample*.html', __dirname);
     expect(global.console.log).not.toHaveBeenCalled();
     expect(global.console.warn).not.toHaveBeenCalled();
     expect(global.console.error).not.toHaveBeenCalled();
-  });
-
-  afterEach(() => {
-    let rules = getRulesList();
-    rules.forEach(rule => global.process.env[rule.name] = 'error');
   });
 });

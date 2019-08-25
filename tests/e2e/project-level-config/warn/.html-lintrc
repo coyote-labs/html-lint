@@ -1,0 +1,6 @@
+{
+  "doctype-first": "warn",
+  "class-ad-disabled": "warn",
+  "id-ad-disabled": "warn",
+  "id-unique": "warn"
+}

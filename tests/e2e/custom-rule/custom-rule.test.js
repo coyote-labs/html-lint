@@ -1,4 +1,4 @@
-const lint = require('../../../index');
+const { htmlLint } = require('../../../index');
 
 global.console = {
   error: jest.fn(),
@@ -7,25 +7,20 @@ global.console = {
 
 beforeEach(() => {
   jest.resetModules();
-  jest.mock('cosmiconfig');
-  process.env['workingDir'] = __dirname;
 });
 
 test.each([
-  'tests/rules/custom-rule/sample-a.html',
+  'tests/e2e/custom-rule/sample-a.html',
 ])(
   'custom-rule %s',
   async(fixture) => {
     expect.hasAssertions();
+
     try {
-      await lint(fixture);
+      await htmlLint(fixture, __dirname);
     } catch ({ message }) {
       expect(global.console.error).toMatchSnapshot();
       expect(global.console.warn).toMatchSnapshot();
     }
   },
 );
-
-afterEach(() => {
-  process.env['workingDir'] = '';
-});

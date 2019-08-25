@@ -1,3 +1,5 @@
+const { htmlLint } = require('../../../index');
+
 global.console = {
   error: jest.fn().mockName('error'),
   warn: jest.fn().mockName('warn'),
@@ -13,8 +15,7 @@ describe('file-level-config', () => {
     expect.hasAssertions();
 
     try {
-      const lint = require('../../../index');
-      await lint('tests/e2e/file-level-config/fixtures/mixed.html');
+      await htmlLint('tests/e2e/file-level-config/fixtures/mixed.html');
     } catch ({ message }) {
       expect(global.console.error).toMatchSnapshot();
       expect(global.console.warn).toMatchSnapshot();

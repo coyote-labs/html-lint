@@ -1,11 +1,11 @@
 import { BaseRule, Options } from './base-rule';
 
 export class ClassAdDisabled extends BaseRule {
-  constructor() {
+  constructor(options: any) {
     super({
       name: 'class-ad-disabled',
-      message: 'Class names should not contain `ad(s)` or `sponsor(s)` to avoid getting flagged by ad blockers.'
-    })
+      message: 'Class names should not contain `ad(s)` or `sponsor(s)` to avoid getting flagged by ad blockers.',
+    }, options);
   }
 
   lint = (ast: any, options: Options) =>  {

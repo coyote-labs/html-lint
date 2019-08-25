@@ -1,11 +1,11 @@
 import { BaseRule, Options } from './base-rule';
 
 export class IdUnique extends BaseRule {
-  constructor() {
+  constructor(options: any) {
     super({
       name: 'id-unique',
       message: 'IDs should be unique'
-    })
+    }, options);
   }
 
   lint = (ast: any, options: Options) =>  {

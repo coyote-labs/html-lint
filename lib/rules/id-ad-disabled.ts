@@ -1,11 +1,11 @@
 import { BaseRule, Options } from './base-rule';
 
 export class IdAdDisabled extends BaseRule {
-  constructor() {
+  constructor(options: any) {
     super({
       name: 'id-ad-disabled',
-      message: 'IDs should not contain `ad(s)` or `sponsor(s)` to avoid getting flagged by ad blockers.'
-    })
+      message: 'IDs should not contain `ad(s)` or `sponsor(s)` to avoid getting flagged by ad blockers.',
+    }, options);
   }
 
   lint = (ast: any, options: Options) =>  {

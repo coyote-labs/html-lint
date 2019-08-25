@@ -1,10 +1,10 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`custom-rule tests/rules/custom-rule/sample-a.html 1`] = `
+exports[`custom-rule tests/e2e/custom-rule/sample-a.html 1`] = `
 [MockFunction] {
   "calls": Array [
     Array [
-      "[101m[html-lint] 3 errors in tests/rules/custom-rule/sample-a.html[49m",
+      "[101m[html-lint] 3 errors in tests/e2e/custom-rule/sample-a.html[49m",
     ],
     Array [
       "[90mclass-ad-disabled: Class names should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[39m
@@ -70,11 +70,11 @@ exports[`custom-rule tests/rules/custom-rule/sample-a.html 1`] = `
 }
 `;
 
-exports[`custom-rule tests/rules/custom-rule/sample-a.html 2`] = `
+exports[`custom-rule tests/e2e/custom-rule/sample-a.html 2`] = `
 [MockFunction] {
   "calls": Array [
     Array [
-      "[43m[30m[html-lint] 1 warning in tests/rules/custom-rule/sample-a.html[39m[49m",
+      "[43m[30m[html-lint] 1 warning in tests/e2e/custom-rule/sample-a.html[39m[49m",
     ],
     Array [
       "[90msrc-not-empty: Src attribute should not be empty.[39m

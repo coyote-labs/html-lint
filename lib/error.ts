@@ -36,7 +36,8 @@ export function formatViolation(
           }
         }, {
           message: ruleMeta.message,
-          highlightCode: true
+          highlightCode: true,
+          forceColor: true
         }
       );
   } catch(err) {
@@ -135,7 +136,8 @@ export function printViolations(
 }
 
 export function handleExit(
-  { violations }: { violations: any }
+  { violations }: { violations: any },
+  pool: any
 ) {
   let files: Array<string> = Object.keys(violations);
   let shouldThrow: boolean = files.reduce((accummulator: boolean, file: string) => {
@@ -145,13 +147,18 @@ export function handleExit(
 
     return accummulator || false;
   }, false);
+
+  if (pool) {
+    pool.terminate();
+  }
+
   if (shouldThrow) {
     throw new Error(chalk.red('html-lint failed.'));
   }
 }
 
-export function report(runTimeArgs: any) {
+export function report(runTimeArgs: any, pool: any) {
   processFileLevelConfig(runTimeArgs);
   printViolations(runTimeArgs);
-  handleExit(runTimeArgs);
+  handleExit(runTimeArgs, pool);
 }
