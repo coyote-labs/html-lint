@@ -8,11 +8,11 @@ export class IdAdDisabled extends BaseRule {
     }, options);
   }
 
-  lint = (ast: any, options: Options) =>  {
+  lint = (ast: any, options: Options): any => {
     if (Array.isArray(ast)) {
       ast.forEach((node) => {
         if (node.attrs) {
-          let {attrs} = node;
+          const {attrs} = node;
           let {id = []} = attrs;
           if (id.length) {
             id = id[0];

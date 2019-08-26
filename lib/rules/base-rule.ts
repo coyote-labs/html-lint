@@ -6,46 +6,46 @@ import { getRulesList } from "../utils";
 export type ErrorLevel = 'off' | 'warn' | 'error';
 
 export type RuleMeta = {
-  name: string,
-  message: string,
-  level?: ErrorLevel
+  name: string;
+  message: string;
+  level?: ErrorLevel;
 };
 
 export type FileMeta = {
-  name: string,
-  contents: string
+  name: string;
+  contents: string;
 };
 
 export interface Options {
   runtime: {
     violations: {
       [index: string]: {
-        errors: Array<string>,
-        warnings: Array<string>,
-        ignored: Array<string>
-      }
-    },
+        errors: Array<string>;
+        warnings: Array<string>;
+        ignored: Array<string>;
+      };
+    };
     htmlLintConfig: {
       // fileName: { rule: value }
       [index: string]: {
-        [index: string]: ErrorLevel
-      }
-    },
-    configPath: string
-  },
-  idsPresent: {},
-  fileMeta: FileMeta
-};
-
-export interface Config {
-  [index: string]: ErrorLevel
+        [index: string]: ErrorLevel;
+      };
+    };
+    configPath: string;
+  };
+  idsPresent: {};
+  fileMeta: FileMeta;
 }
 
-declare var process : {
+export interface Config {
+  [index: string]: ErrorLevel;
+}
+
+declare let process: {
   env: {
-    [index: string]: ErrorLevel
-  },
-  cwd: Function
+    [index: string]: ErrorLevel;
+  };
+  cwd: Function;
 }
 
 export class BaseRule {
@@ -54,13 +54,13 @@ export class BaseRule {
   constructor(meta: RuleMeta, configPath: string = process.cwd()) {
     // load project level configuration
     let { config } = (cosmiconfig('html-lint').searchSync(configPath) || { config: {} });
-    let { customRules = {} } = config;
-    let defaultErrorLevel: ErrorLevel = 'error';
-    let defaultConfig: Config = {};
+    const { customRules = {} } = config;
+    const defaultErrorLevel: ErrorLevel = 'error';
+    const defaultConfig: Config = {};
 
-    let rules = getRulesList(configPath);
+    const rules = getRulesList(configPath);
     rules.forEach((rule) => {
-      let { name } = rule;
+      const { name } = rule;
       defaultConfig[name] = defaultErrorLevel;
     });
 
@@ -74,19 +74,20 @@ export class BaseRule {
     return this.ruleMeta.level || 'error';
   }
 
-  shouldError = () => {
+  shouldError = (): boolean => {
     return this.getErrorLevel() === 'error';
   }
 
-  shouldWarn = () => {
+  shouldWarn = (): boolean => {
     return this.getErrorLevel() === 'warn';
   }
 
-  shouldIgnore = () => {
+  shouldIgnore = (): boolean => {
     return this.getErrorLevel() === 'off';
   }
 
-  lint = (ast: any, options: Options) => {
+  // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  lint = (ast: any, options: Options): any => {
     return ast;
   }
 
@@ -98,8 +99,8 @@ export class BaseRule {
     );
   }
 
-  violation = (node: any, options: Options) => {
-    let fileName = options.fileMeta.name;
+  violation = (node: any, options: Options): void => {
+    const fileName = options.fileMeta.name;
 
     let violationsForFile = options.runtime.violations[fileName];
     if (!violationsForFile) {
