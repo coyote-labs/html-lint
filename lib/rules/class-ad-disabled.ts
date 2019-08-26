@@ -8,14 +8,14 @@ export class ClassAdDisabled extends BaseRule {
     }, options);
   }
 
-  lint = (ast: any, options: Options) =>  {
+  lint = (ast: any, options: Options): any => {
     if (Array.isArray(ast)) {
       ast.forEach((node) => {
         if (node.attrs) {
-          let {attrs} = node;
+          const {attrs} = node;
           let classAttr = attrs.class || [];
           classAttr = classAttr[0] || {};
-          let classNames = (classAttr.content || '').split(' ');
+          const classNames = (classAttr.content || '').split(' ');
           if (classNames.length) {
             classNames.forEach((className: string) => {
               if (

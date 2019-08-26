@@ -8,7 +8,7 @@ export class IdUnique extends BaseRule {
     }, options);
   }
 
-  lint = (ast: any, options: Options) =>  {
+  lint = (ast: any, options: Options): any => {
     let ids: any;
     if (!options['idsPresent']) {
       options.idsPresent = {};
@@ -20,7 +20,7 @@ export class IdUnique extends BaseRule {
     if (Array.isArray(ast)) {
       ast.forEach((node) => {
         if (node.attrs) {
-          let {attrs} = node;
+          const {attrs} = node;
           let {id} = attrs;
           if (Array.isArray(id)) {
             id = id[0];
@@ -39,6 +39,7 @@ export class IdUnique extends BaseRule {
         }
       });
     }
+
     return ast;
   }
 }

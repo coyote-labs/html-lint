@@ -8,22 +8,22 @@ export class ExtractFileConfig extends BaseRule {
     })
   }
 
-  lint = (ast: any, options: Options) =>  {
-    let fileName = options.fileMeta.name;
+  lint = (ast: any, options: Options): any => {
+    const fileName = options.fileMeta.name;
 
     if (Array.isArray(ast)) {
       for (let i = 0; i < ast.length; i++) {
-        let currentNode = ast[i];
-        let currentNodeType = currentNode.type;
+        const currentNode = ast[i];
+        const currentNodeType = currentNode.type;
         if (currentNodeType === 'comment') {
-          let { content = '' } = currentNode;
+          const { content = '' } = currentNode;
           if (content.includes('html-lint')) {
-            let rawConfig = content.replace('html-lint', '').trim();
-            let configPairs = rawConfig.split(',').map((pair: string) => pair.trim());
+            const rawConfig = content.replace('html-lint', '').trim();
+            const configPairs = rawConfig.split(',').map((pair: string) => pair.trim());
             configPairs.forEach((pair: string) => {
-              let keyValuePair = pair.split(':').map((pair: string) => pair.trim());
-              let key = keyValuePair[0];
-              let value = keyValuePair[1] as ErrorLevel;
+              const keyValuePair = pair.split(':').map((pair: string) => pair.trim());
+              const key = keyValuePair[0];
+              const value = keyValuePair[1] as ErrorLevel;
 
               let fileConfig = options.runtime.htmlLintConfig[fileName];
               if (!fileConfig) {

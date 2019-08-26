@@ -8,16 +8,16 @@ export class DoctypeFirst extends BaseRule {
     }, options);
   }
 
-  lint = (ast: any, options: Options) =>  {
+  lint = (ast: any, options: Options): any => {
     if (Array.isArray(ast)) {
-      let skippableTypes = [
+      const skippableTypes = [
         'comment',
         'text'
       ];
 
       for (let i = 0; i < ast.length; i++) {
-        let currentNode = ast[i];
-        let currentNodeType = currentNode.type;
+        const currentNode = ast[i];
+        const currentNodeType = currentNode.type;
         if (currentNodeType === 'doctype') {
           return ast;
         }

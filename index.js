@@ -23,7 +23,7 @@ const runTimeArgs = {
 };
 
 const linter = async(files, runTimeArgs) => {
-  let lint =  files.map((file) => {
+  const lint =  files.map((file) => {
     return reshape({
       plugins: getRules(runTimeArgs),
       fileMeta: {
@@ -58,14 +58,14 @@ const htmlLint = async function(htmlFilesGlob, configPath) {
     };
   });
 
-  let chunks = chunk(htmlFiles, physicalCpuCount);
+  const chunks = chunk(htmlFiles, physicalCpuCount);
 
-  let lintPromises = chunks.map((fileGroup) => {
+  const lintPromises = chunks.map((fileGroup) => {
     return pool.exec('linter', [fileGroup, runTimeArgs]);
   });
 
-  let results = await allSettled(lintPromises);
-  let combinedResults = merge({}, ...results.map(result => result.value));
+  const results = await allSettled(lintPromises);
+  const combinedResults = merge({}, ...results.map(result => result.value));
   report(combinedResults, pool);
 }
 
