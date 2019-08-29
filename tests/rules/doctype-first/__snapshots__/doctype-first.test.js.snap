@@ -8,7 +8,7 @@ exports[`doctype-first tests/rules/doctype-first/error-no-doctype.html 1`] = `
     ],
     Array [
       "[90mdoctype-first: HTML files should begin with a \`doctype\`.[39m
-[0m[31m[1m>[22m[39m[90m 1 | [39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 1 | [39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33mhead[39m[33m>[39m[33m<[39m[33mtitle[39m[33m>[39mtitle[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[33m<[39m[33m/[39m[33mhead[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
 [0m [90m   | [39m[31m[1m^[22m[39m [31m[1mHTML files should begin with a \`doctype\`.[22m[39m[0m",
       "
 ",
@@ -43,7 +43,7 @@ exports[`doctype-first tests/rules/doctype-first/error-no-doctype-leading-commen
     ],
     Array [
       "[90mdoctype-first: HTML files should begin with a \`doctype\`.[39m
-[0m[31m[1m>[22m[39m[90m 1 | [39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 1 | [39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33mhead[39m[33m>[39m[33m<[39m[33mtitle[39m[33m>[39mtitle[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[33m<[39m[33m/[39m[33mhead[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
 [0m [90m   | [39m[31m[1m^[22m[39m [31m[1mHTML files should begin with a \`doctype\`.[22m[39m[0m",
       "
 ",
@@ -58,7 +58,7 @@ exports[`doctype-first tests/rules/doctype-first/error-no-doctype-leading-commen
     Array [
       "[90mdoctype-first: HTML files should begin with a \`doctype\`.[39m
 [0m [90m 1 | [39m[33m<[39m[33m![39m[33m--[39m [36mthis[39m is a test [33m--[39m[33m>[39m[0m
-[0m[31m[1m>[22m[39m[90m 2 | [39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 2 | [39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33mhead[39m[33m>[39m[33m<[39m[33mtitle[39m[33m>[39mtitle[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[33m<[39m[33m/[39m[33mhead[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
 [0m [90m   | [39m[31m[1m^[22m[39m [31m[1mHTML files should begin with a \`doctype\`.[22m[39m[0m",
       "
 ",
