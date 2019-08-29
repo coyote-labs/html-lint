@@ -1,0 +1,98 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`src-not-empty tests/rules/src-not-empty/error-empty-src.html 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "[101m[html-lint] 1 error in tests/rules/src-not-empty/error-empty-src.html[49m",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m[31m[1m>[22m[39m[90m 1 | [39m[33m<[39m[33m![39m[33mDOCTYPE[39m html[33m>[39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33mhead[39m[33m>[39m[33m<[39m[33mtitle[39m[33m>[39mtitle[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[33m<[39m[35m/head><body><img src=\\"\\" /[39m[33m>[39m[33m<[39m[33m/[39m[33mbody[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
+[0m [90m   | [39m                                                                 [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m",
+      "
+",
+    ],
+    Array [
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
+
+exports[`src-not-empty tests/rules/src-not-empty/error-no-src-attr.html 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "[101m[html-lint] 1 error in tests/rules/src-not-empty/error-empty-src.html[49m",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m[31m[1m>[22m[39m[90m 1 | [39m[33m<[39m[33m![39m[33mDOCTYPE[39m html[33m>[39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33mhead[39m[33m>[39m[33m<[39m[33mtitle[39m[33m>[39mtitle[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[33m<[39m[35m/head><body><img src=\\"\\" /[39m[33m>[39m[33m<[39m[33m/[39m[33mbody[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
+[0m [90m   | [39m                                                                 [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m",
+      "
+",
+    ],
+    Array [
+      "
+",
+    ],
+    Array [
+      "[101m[html-lint] 1 error in tests/rules/src-not-empty/error-no-src-attr.html[49m",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 1 | [39m[33m<[39m[33m![39m[33m--[39m [36mthis[39m is a test [33m--[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 2 | [39m[33m<[39m[33m![39m[33mDOCTYPE[39m html[33m>[39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33mhead[39m[33m>[39m[33m<[39m[33mtitle[39m[33m>[39mtitle[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[33m<[39m[35m/head><body><img alt=\\"alt\\" /[39m[33m>[39m[33m<[39m[33m/[39m[33mbody[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
+[0m [90m   | [39m                                                            [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m",
+      "
+",
+    ],
+    Array [
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;

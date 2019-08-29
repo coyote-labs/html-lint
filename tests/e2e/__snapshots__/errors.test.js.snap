@@ -45,7 +45,7 @@ exports[`html-lint throws on errors 1`] = `
 ",
     ],
     Array [
-      "[101m[html-lint] 2 errors in tests/sample-b.html[49m",
+      "[101m[html-lint] 3 errors in tests/sample-b.html[49m",
     ],
     Array [
       "[90mid-ad-disabled: IDs should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[39m
@@ -67,7 +67,18 @@ exports[`html-lint throws on errors 1`] = `
 [0m [90m    | [39m           [31m[1m^[22m[39m [31m[1mIDs should be unique[22m[39m[0m
 [0m [90m 10 | [39m      [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
 [0m [90m 11 | [39m    [33m<[39m[33m/[39m[33mmain[39m[33m>[39m[0m
-[0m [90m 12 | [39m  [33m<[39m[33m/[39m[33mbody[39m[33m>[39m[0m",
+[0m [90m 12 | [39m    [33m<[39m[33mimg[39m alt[33m=[39m[32m\\"\\"[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 10 | [39m      [33m<[39m[33m/[39m[33mdiv[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33m/[39m[33mmain[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 12 | [39m    [33m<[39m[33mimg[39m alt[33m=[39m[32m\\"\\"[39m[33m>[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 13 | [39m  [33m<[39m[33m/[39m[33mbody[39m[33m>[39m[0m
+[0m [90m 14 | [39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m",
       "
 ",
     ],
@@ -77,6 +88,10 @@ exports[`html-lint throws on errors 1`] = `
     ],
   ],
   "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
     Object {
       "type": "return",
       "value": undefined,
