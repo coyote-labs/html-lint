@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`doctype-first tests/rules/inline-style-disabled/error-inline-style-disabled.html 1`] = `
+exports[`inline-style-disabled tests/rules/inline-style-disabled/error-inline-style-disabled.html 1`] = `
 [MockFunction] {
   "calls": Array [
     Array [
