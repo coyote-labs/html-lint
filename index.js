@@ -34,7 +34,13 @@ const linter = async(files, runTimeArgs) => {
     }).process(file.contents.trim());
   });
 
-  await allSettled(lint);
+  let results = await allSettled(lint);
+  let jsErrors = results.filter(result => result.status === 'rejected');
+  jsErrors.forEach(jsError => console.error(jsError.reason));
+  if (jsErrors.length) {
+    throw new Error();
+  }
+
   return runTimeArgs;
 };
 
@@ -65,6 +71,11 @@ const htmlLint = async function(htmlFilesGlob, configPath) {
   });
 
   const results = await allSettled(lintPromises);
+  let failedResults = results.filter(result => result.status === 'rejected');
+  if (failedResults.length) {
+    process.exit(1);
+  }
+
   const combinedResults = merge({}, ...results.map(result => result.value));
   report(combinedResults, pool);
 }
