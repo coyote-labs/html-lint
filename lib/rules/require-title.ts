@@ -14,7 +14,7 @@ export class RequireTitle extends BaseRule {
     let head;
 
     if (Array.isArray(ast)) {
-      html = ast.find(node => node.name === 'html') || [];
+      html = ast.find((node: any) => node.name === 'html') || [];
       head = (html.content || []).find((node: any) => node.name === 'head') || {};
 
       const titleNode = (head.content || []).find((node: any) => node.name === 'title') || {};

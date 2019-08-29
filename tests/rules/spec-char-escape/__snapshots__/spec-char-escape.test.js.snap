@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`spec-char-escape tests/rules/spec-char-escape/error.html 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "[101m[html-lint] 3 errors in tests/rules/spec-char-escape/error.html[49m",
+    ],
+    Array [
+      "[90mspec-char-escape: Special characters need to be escaped.[39m
+[0m [90m  7 | [39m    [33m<[39m[33mmain[39m[33m>[39m[0m
+[0m [90m  8 | [39m      [33m<[39m[33mul[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39m        [33m<[39m[33mli[39m[33m>[39m[33mCompa[39m[33m&[39mn[33m>[39my [33mA[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m [90m    | [39m                 [31m[1m^[22m[39m [31m[1mSpecial characters need to be escaped.[22m[39m[0m
+[0m [90m 10 | [39m        [33m<[39m[33mli[39m[33m>[39m[33mCompany[39m [33mB[39m[33m<<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m [90m 11 | [39m      [33m<[39m[33m/[39m[33mul[39m[33m>[39m[0m
+[0m [90m 12 | [39m    [33m<[39m[33m/[39m[33mmain[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90mspec-char-escape: Special characters need to be escaped.[39m
+[0m [90m  7 | [39m    [33m<[39m[33mmain[39m[33m>[39m[0m
+[0m [90m  8 | [39m      [33m<[39m[33mul[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39m        [33m<[39m[33mli[39m[33m>[39m[33mCompa[39m[33m&[39mn[33m>[39my [33mA[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m [90m    | [39m                   [31m[1m^[22m[39m [31m[1mSpecial characters need to be escaped.[22m[39m[0m
+[0m [90m 10 | [39m        [33m<[39m[33mli[39m[33m>[39m[33mCompany[39m [33mB[39m[33m<<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m [90m 11 | [39m      [33m<[39m[33m/[39m[33mul[39m[33m>[39m[0m
+[0m [90m 12 | [39m    [33m<[39m[33m/[39m[33mmain[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90mspec-char-escape: Special characters need to be escaped.[39m
+[0m [90m  8 | [39m      [33m<[39m[33mul[39m[33m>[39m[0m
+[0m [90m  9 | [39m        [33m<[39m[33mli[39m[33m>[39m[33mCompa[39m[33m&[39mn[33m>[39my [33mA[39m[33m<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 10 | [39m        [33m<[39m[33mli[39m[33m>[39m[33mCompany[39m [33mB[39m[33m<<[39m[33m/[39m[33mli[39m[33m>[39m[0m
+[0m [90m    | [39m                     [31m[1m^[22m[39m [31m[1mSpecial characters need to be escaped.[22m[39m[0m
+[0m [90m 11 | [39m      [33m<[39m[33m/[39m[33mul[39m[33m>[39m[0m
+[0m [90m 12 | [39m    [33m<[39m[33m/[39m[33mmain[39m[33m>[39m[0m
+[0m [90m 13 | [39m  [33m<[39m[33m/[39m[33mbody[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
