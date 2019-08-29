@@ -1,4 +1,5 @@
 {
   "doctype-first": "warn",
-  "class-ad-disabled": "off"
+  "class-ad-disabled": "off",
+  "src-not-empty": "warn"
 }

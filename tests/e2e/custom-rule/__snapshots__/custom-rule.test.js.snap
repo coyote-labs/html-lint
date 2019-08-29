@@ -74,7 +74,18 @@ exports[`custom-rule tests/e2e/custom-rule/sample-a.html 2`] = `
 [MockFunction] {
   "calls": Array [
     Array [
-      "[43m[30m[html-lint] 1 warning in tests/e2e/custom-rule/sample-a.html[39m[49m",
+      "[43m[30m[html-lint] 2 warnings in tests/e2e/custom-rule/sample-a.html[39m[49m",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 10 | [39m      [33m<[39m[33m/[39m[33mul[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33m/[39m[33mmain[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 12 | [39m    [33m<[39m[33mimg[39m src[33m=[39m[32m\\"\\"[39m [33m/[39m[33m>[39m[0m
+[0m [90m    | [39m         [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 13 | [39m  [33m<[39m[33m/[39m[33mbody[39m[33m>[39m[0m
+[0m [90m 14 | [39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m",
+      "
+",
     ],
     Array [
       "[90msrc-not-empty: Src attribute should not be empty.[39m
@@ -93,6 +104,10 @@ exports[`custom-rule tests/e2e/custom-rule/sample-a.html 2`] = `
     ],
   ],
   "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
     Object {
       "type": "return",
       "value": undefined,

@@ -2,5 +2,6 @@
   "doctype-first": "off",
   "class-ad-disabled": "off",
   "id-ad-disabled": "off",
-  "id-unique": "off"
+  "id-unique": "off",
+  "src-not-empty": "off"
 }
