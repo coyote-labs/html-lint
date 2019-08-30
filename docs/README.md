@@ -47,7 +47,7 @@ const { htmlLint } = require('@coyote-labs/html-lint');
 
 html-lint loads the following configuration files if they are present:
 
-* A `html-lint` property in package.json.
+* An `html-lint` property in package.json.
 * A `.html-lintrc` file in JSON or YAML format.
 * A `.html-lintrc.json`, `.html-lintrc.yaml`, `.html-lintrc.yml`,
   or `.html-lintrc.js` file.
