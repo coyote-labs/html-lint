@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`attr-unsafe-chars tests/rules/attr-unsafe-chars/error.html 1`] = `
+[MockFunction] {
+  "calls": Array [
+    Array [
+      "[101m[html-lint] 1 error in tests/rules/attr-unsafe-chars/error.html[49m",
+    ],
+    Array [
+      "[90mattr-unsafe-chars: Attribute values cannot use unsafe characters[39m
+[0m [90m  5 | [39m  [33m<[39m[33m/[39m[33mhead[39m[33m>[39m[0m
+[0m [90m  6 | [39m  [33m<[39m[33mbody[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  7 | [39m    [33m<[39m[33mmain[39m data[33m-[39mtitle[33m=[39m[32m\\"	test\\"[39m[33m>[39m[0m
+[0m [90m    | [39m          [31m[1m^[22m[39m [31m[1mAttribute values cannot use unsafe characters[22m[39m[0m
+[0m [90m  8 | [39m      [33m<[39m[33mp[39m[33m>[39m[33mHello[39m[33m<[39m[33m/[39m[33mp[39m[33m>[39m[0m
+[0m [90m  9 | [39m    [33m<[39m[33m/[39m[33mmain[39m[33m>[39m[0m
+[0m [90m 10 | [39m  [33m<[39m[33m/[39m[33mbody[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "
+",
+    ],
+  ],
+  "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+  ],
+}
+`;
