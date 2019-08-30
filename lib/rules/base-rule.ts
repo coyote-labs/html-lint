@@ -54,7 +54,7 @@ export class BaseRule {
   constructor(meta: RuleMeta, configPath: string = process.cwd()) {
     // load project level configuration
     let { config } = (cosmiconfig('html-lint').searchSync(configPath) || { config: {} });
-    const { customRules = {} } = config;
+    const { 'custom-rules': customRules = {} } = config;
     const defaultErrorLevel: ErrorLevel = 'error';
     const defaultConfig: Config = {};
 

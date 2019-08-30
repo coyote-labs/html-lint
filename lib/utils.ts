@@ -30,10 +30,10 @@ export function getRulesList(configPath: string): Array<RuleDetails> {
   let customRuleNames: Array<string> = [];
 
   const { config } = (cosmiconfig('html-lint').searchSync(configPath) || { config: {} });
-  const customRulesDir = config.customRules ? config.customRules.dir : 'html-lint';
+  const customRulesDir = config['custom-rules'] ? config['custom-rules'].dir : 'html-lint';
 
-  if (config.customRules) {
-    customRuleNames =  Object.keys(config.customRules.rules);
+  if (config['custom-rules']) {
+    customRuleNames =  Object.keys(config['custom-rules'].rules);
   }
 
   const rules = fs.readdirSync(rulesDir).filter((rule) => {

@@ -1,5 +1,5 @@
 {
-  "customRules" : {
+  "custom-rules" : {
     "dir": "tests/e2e/custom-rule/customRules",
     "rules": {
       "src-not-empty": "warn"
