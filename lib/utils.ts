@@ -74,3 +74,7 @@ export function printUsage(): void {
   console.error(usage);
   process.exit(1);
 }
+
+export function deepClone(object: any): any {
+  return JSON.parse(JSON.stringify(object));
+}

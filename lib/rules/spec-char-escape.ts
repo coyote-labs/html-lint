@@ -1,4 +1,5 @@
 import { BaseRule, Options } from './base-rule';
+import { deepClone } from '../utils';
 
 export class SpecCharEscape extends BaseRule {
   constructor(options: any) {
@@ -16,7 +17,7 @@ export class SpecCharEscape extends BaseRule {
           const regex = /[<>&]/g;
           let match;
           while ((match = regex.exec(content)) != null) {
-            const nodeCopy = JSON.parse(JSON.stringify(node));
+            const nodeCopy = deepClone(node);
             nodeCopy.location.col = nodeCopy.location.col + match.index;
             this.violation(nodeCopy, options);
           }
