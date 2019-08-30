@@ -1,6 +1,6 @@
 {
-  "name": "html-lint",
-  "version": "1.0.0",
+  "name": "@coyote-labs/html-lint",
+  "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
   "scripts": {

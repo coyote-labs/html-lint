@@ -1,8 +1,8 @@
-# html-hint
+# html-lint
 
 > A meaningful static analysis tool for HTML
 
-html-hint is a linter for HTML files. It uses
+html-lint is a linter for HTML files. It uses
 [reshape](https://github.com/reshape/reshape) to analyse
 your HTML and provides feedback to make your HTML better.
 
@@ -24,14 +24,28 @@ yarn add -D @coyote-labs/html-lint
 node_modules/.bin/html-lint build/**/*.html
 ```
 
-<!-- ![html-lint results](https://github.com/coyote-labs/html-lint/raw/master/docs/screenshots/demo.png) -->
-![html-lint results](./screenshots/demo.png)
+You can also use this programmatically.
+
+```js
+const { htmlLint } = require('@coyote-labs/html-lint');
+
+(async() => {
+  try {
+    // it accepts glob patterns or an array of file paths.
+    await htmlLint('dist/*.html');
+  } catch (error) {
+    console.log(error)
+  }
+})();
+```
+
+![html-lint results](./_media/demo.png)
 
 ## Configuration
 
 ### Project Level
 
-html-hint loads the following configuration files if they are present:
+html-lint loads the following configuration files if they are present:
 
 * A `html-lint` property in package.json.
 * A `.html-lintrc` file in JSON or YAML format.
