@@ -8,7 +8,7 @@ exports[`src-not-empty tests/rules/src-not-empty/error-empty-src.html 1`] = `
     ],
     Array [
       "[90msrc-not-empty: src attribute should not be empty.[39m
-[0m[31m[1m>[22m[39m[90m 1 | [39m[33m<[39m[33m![39m[33mDOCTYPE[39m html[33m>[39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33mhead[39m[33m>[39m[33m<[39m[33mtitle[39m[33m>[39mtitle[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[33m<[39m[35m/head><body><img src=\\"\\" /[39m[33m>[39m[33m<[39m[33m/[39m[33mbody[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 1 | [39m[33m<[39m[33m![39m[33mDOCTYPE[39m html[33m>[39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33mhead[39m[33m>[39m[33m<[39m[33mtitle[39m[33m>[39mtitle[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[33m<[39m[35m/head><body><img src=\\"\\" alt=\\"\\"/[39m[33m>[39m[33m<[39m[33m/[39m[33mbody[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
 [0m [90m   | [39m                                                                 [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m",
       "
 ",
@@ -43,7 +43,7 @@ exports[`src-not-empty tests/rules/src-not-empty/error-no-src-attr.html 1`] = `
     ],
     Array [
       "[90msrc-not-empty: src attribute should not be empty.[39m
-[0m[31m[1m>[22m[39m[90m 1 | [39m[33m<[39m[33m![39m[33mDOCTYPE[39m html[33m>[39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33mhead[39m[33m>[39m[33m<[39m[33mtitle[39m[33m>[39mtitle[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[33m<[39m[35m/head><body><img src=\\"\\" /[39m[33m>[39m[33m<[39m[33m/[39m[33mbody[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 1 | [39m[33m<[39m[33m![39m[33mDOCTYPE[39m html[33m>[39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33mhead[39m[33m>[39m[33m<[39m[33mtitle[39m[33m>[39mtitle[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[33m<[39m[35m/head><body><img src=\\"\\" alt=\\"\\"/[39m[33m>[39m[33m<[39m[33m/[39m[33mbody[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
 [0m [90m   | [39m                                                                 [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m",
       "
 ",

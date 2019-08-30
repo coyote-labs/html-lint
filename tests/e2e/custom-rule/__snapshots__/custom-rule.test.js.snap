@@ -4,7 +4,18 @@ exports[`custom-rule tests/e2e/custom-rule/sample-a.html 1`] = `
 [MockFunction] {
   "calls": Array [
     Array [
-      "[101m[html-lint] 3 errors in tests/e2e/custom-rule/sample-a.html[49m",
+      "[101m[html-lint] 4 errors in tests/e2e/custom-rule/sample-a.html[49m",
+    ],
+    Array [
+      "[90malt-require: alt attribute must be present in <img /> tags[39m
+[0m [90m 10 | [39m      [33m<[39m[33m/[39m[33mul[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33m/[39m[33mmain[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 12 | [39m    [33m<[39m[33mimg[39m src[33m=[39m[32m\\"\\"[39m [33m/[39m[33m>[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m [31m[1malt attribute must be present in <img /> tags[22m[39m[0m
+[0m [90m 13 | [39m  [33m<[39m[33m/[39m[33mbody[39m[33m>[39m[0m
+[0m [90m 14 | [39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m",
+      "
+",
     ],
     Array [
       "[90mclass-ad-disabled: Class names should not contain \`ad(s)\` or \`sponsor(s)\` to avoid getting flagged by ad blockers.[39m
@@ -46,6 +57,10 @@ exports[`custom-rule tests/e2e/custom-rule/sample-a.html 1`] = `
     ],
   ],
   "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
     Object {
       "type": "return",
       "value": undefined,
