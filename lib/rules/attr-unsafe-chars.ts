@@ -15,7 +15,7 @@ export class AttrUnsafeChars extends BaseRule {
       ast.forEach((node) => {
         const { attrs = {} } = node;
         for (const attribute in attrs) {
-          const value = attrs[attribute][0];
+          const value = attrs[attribute][0] || {};
           let match;
           while ((match = regex.exec(value.content)) != null) {
             this.violation(value, options);
