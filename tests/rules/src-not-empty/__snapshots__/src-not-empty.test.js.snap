@@ -4,12 +4,101 @@ exports[`src-not-empty tests/rules/src-not-empty/error-empty-src.html 1`] = `
 [MockFunction] {
   "calls": Array [
     Array [
-      "[101m[html-lint] 1 error in tests/rules/src-not-empty/error-empty-src.html[49m",
+      "[101m[html-lint] 8 errors in tests/rules/src-not-empty/error-empty-src.html[49m",
     ],
     Array [
       "[90msrc-not-empty: src attribute should not be empty.[39m
-[0m[31m[1m>[22m[39m[90m 1 | [39m[33m<[39m[33m![39m[33mDOCTYPE[39m html[33m>[39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33mhead[39m[33m>[39m[33m<[39m[33mtitle[39m[33m>[39mtitle[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[33m<[39m[35m/head><body><img src=\\"\\" alt=\\"\\"/[39m[33m>[39m[33m<[39m[33m/[39m[33mbody[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
-[0m [90m   | [39m                                                                 [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m",
+[0m [90m  5 | [39m  [33m<[39m[33m/[39m[33mhead[39m[33m>[39m[0m
+[0m [90m  6 | [39m  [33m<[39m[33mbody[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  7 | [39m    [33m<[39m[33mimg[39m src[33m=[39m[32m\\"\\"[39m alt[33m=[39m[32m\\"\\"[39m [33m/[39m[33m>[39m[0m
+[0m [90m    | [39m         [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m  8 | [39m    [33m<[39m[33miframe[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33miframe[39m[33m>[39m[0m
+[0m [90m  9 | [39m    [33m<[39m[33minput[39m type[33m=[39m[32m\\"image\\"[39m src[33m=[39m[32m\\"\\"[39m alt[33m=[39m[32m\\"Submit\\"[39m[33m>[39m[0m
+[0m [90m 10 | [39m    [33m<[39m[33mscript[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m  6 | [39m  [33m<[39m[33mbody[39m[33m>[39m[0m
+[0m [90m  7 | [39m    [33m<[39m[33mimg[39m src[33m=[39m[32m\\"\\"[39m alt[33m=[39m[32m\\"\\"[39m [33m/[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 | [39m    [33m<[39m[33miframe[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33miframe[39m[33m>[39m[0m
+[0m [90m    | [39m            [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m  9 | [39m    [33m<[39m[33minput[39m type[33m=[39m[32m\\"image\\"[39m src[33m=[39m[32m\\"\\"[39m alt[33m=[39m[32m\\"Submit\\"[39m[33m>[39m[0m
+[0m [90m 10 | [39m    [33m<[39m[33mscript[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33membed[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m  7 | [39m    [33m<[39m[33mimg[39m src[33m=[39m[32m\\"\\"[39m alt[33m=[39m[32m\\"\\"[39m [33m/[39m[33m>[39m[0m
+[0m [90m  8 | [39m    [33m<[39m[33miframe[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33miframe[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39m    [33m<[39m[33minput[39m type[33m=[39m[32m\\"image\\"[39m src[33m=[39m[32m\\"\\"[39m alt[33m=[39m[32m\\"Submit\\"[39m[33m>[39m[0m
+[0m [90m    | [39m                        [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 10 | [39m    [33m<[39m[33mscript[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33membed[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[0m
+[0m [90m 12 | [39m    [33m<[39m[33maudio[39m src[33m=[39m[32m\\"\\"[39m controls[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m  9 | [39m    [33m<[39m[33minput[39m type[33m=[39m[32m\\"image\\"[39m src[33m=[39m[32m\\"\\"[39m alt[33m=[39m[32m\\"Submit\\"[39m[33m>[39m[0m
+[0m [90m 10 | [39m    [33m<[39m[33mscript[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 11 | [39m    [33m<[39m[33membed[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[0m
+[0m [90m    | [39m           [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 12 | [39m    [33m<[39m[33maudio[39m src[33m=[39m[32m\\"\\"[39m controls[33m>[39m[0m
+[0m [90m 13 | [39m      [33mYour[39m browser does not support the audio element[33m.[39m[0m
+[0m [90m 14 | [39m    [33m<[39m[33m/[39m[33maudio[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 10 | [39m    [33m<[39m[33mscript[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33membed[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 12 | [39m    [33m<[39m[33maudio[39m src[33m=[39m[32m\\"\\"[39m controls[33m>[39m[0m
+[0m [90m    | [39m           [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 13 | [39m      [33mYour[39m browser does not support the audio element[33m.[39m[0m
+[0m [90m 14 | [39m    [33m<[39m[33m/[39m[33maudio[39m[33m>[39m[0m
+[0m [90m 15 | [39m    [33m<[39m[33mvideo[39m src[33m=[39m[32m\\"\\"[39m controls[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 13 | [39m      [33mYour[39m browser does not support the audio element[33m.[39m[0m
+[0m [90m 14 | [39m    [33m<[39m[33m/[39m[33maudio[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 15 | [39m    [33m<[39m[33mvideo[39m src[33m=[39m[32m\\"\\"[39m controls[33m>[39m[0m
+[0m [90m    | [39m           [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 16 | [39m      [33m<[39m[33msource[39m src[33m=[39m[32m\\"\\"[39m type[33m=[39m[32m\\"video/mp4\\"[39m[33m>[39m[0m
+[0m [90m 17 | [39m      [33m<[39m[33mtrack[39m src[33m=[39m[32m\\"\\"[39m kind[33m=[39m[32m\\"subtitles\\"[39m srclang[33m=[39m[32m\\"en\\"[39m label[33m=[39m[32m\\"English\\"[39m[33m>[39m[0m
+[0m [90m 18 | [39m      [33mYour[39m browser does not support the video tag[33m.[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 14 | [39m    [33m<[39m[33m/[39m[33maudio[39m[33m>[39m[0m
+[0m [90m 15 | [39m    [33m<[39m[33mvideo[39m src[33m=[39m[32m\\"\\"[39m controls[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 16 | [39m      [33m<[39m[33msource[39m src[33m=[39m[32m\\"\\"[39m type[33m=[39m[32m\\"video/mp4\\"[39m[33m>[39m[0m
+[0m [90m    | [39m              [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 17 | [39m      [33m<[39m[33mtrack[39m src[33m=[39m[32m\\"\\"[39m kind[33m=[39m[32m\\"subtitles\\"[39m srclang[33m=[39m[32m\\"en\\"[39m label[33m=[39m[32m\\"English\\"[39m[33m>[39m[0m
+[0m [90m 18 | [39m      [33mYour[39m browser does not support the video tag[33m.[39m[0m
+[0m [90m 19 | [39m    [33m<[39m[33m/[39m[33mvideo[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 15 | [39m    [33m<[39m[33mvideo[39m src[33m=[39m[32m\\"\\"[39m controls[33m>[39m[0m
+[0m [90m 16 | [39m      [33m<[39m[33msource[39m src[33m=[39m[32m\\"\\"[39m type[33m=[39m[32m\\"video/mp4\\"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 17 | [39m      [33m<[39m[33mtrack[39m src[33m=[39m[32m\\"\\"[39m kind[33m=[39m[32m\\"subtitles\\"[39m srclang[33m=[39m[32m\\"en\\"[39m label[33m=[39m[32m\\"English\\"[39m[33m>[39m[0m
+[0m [90m    | [39m             [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 18 | [39m      [33mYour[39m browser does not support the video tag[33m.[39m[0m
+[0m [90m 19 | [39m    [33m<[39m[33m/[39m[33mvideo[39m[33m>[39m[0m
+[0m [90m 20 | [39m  [33m<[39m[33m/[39m[33mbody[39m[33m>[39m[0m",
       "
 ",
     ],
@@ -19,6 +108,34 @@ exports[`src-not-empty tests/rules/src-not-empty/error-empty-src.html 1`] = `
     ],
   ],
   "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
     Object {
       "type": "return",
       "value": undefined,
@@ -39,12 +156,101 @@ exports[`src-not-empty tests/rules/src-not-empty/error-no-src-attr.html 1`] = `
 [MockFunction] {
   "calls": Array [
     Array [
-      "[101m[html-lint] 1 error in tests/rules/src-not-empty/error-empty-src.html[49m",
+      "[101m[html-lint] 8 errors in tests/rules/src-not-empty/error-empty-src.html[49m",
     ],
     Array [
       "[90msrc-not-empty: src attribute should not be empty.[39m
-[0m[31m[1m>[22m[39m[90m 1 | [39m[33m<[39m[33m![39m[33mDOCTYPE[39m html[33m>[39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33mhead[39m[33m>[39m[33m<[39m[33mtitle[39m[33m>[39mtitle[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[33m<[39m[35m/head><body><img src=\\"\\" alt=\\"\\"/[39m[33m>[39m[33m<[39m[33m/[39m[33mbody[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
-[0m [90m   | [39m                                                                 [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m",
+[0m [90m  5 | [39m  [33m<[39m[33m/[39m[33mhead[39m[33m>[39m[0m
+[0m [90m  6 | [39m  [33m<[39m[33mbody[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  7 | [39m    [33m<[39m[33mimg[39m src[33m=[39m[32m\\"\\"[39m alt[33m=[39m[32m\\"\\"[39m [33m/[39m[33m>[39m[0m
+[0m [90m    | [39m         [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m  8 | [39m    [33m<[39m[33miframe[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33miframe[39m[33m>[39m[0m
+[0m [90m  9 | [39m    [33m<[39m[33minput[39m type[33m=[39m[32m\\"image\\"[39m src[33m=[39m[32m\\"\\"[39m alt[33m=[39m[32m\\"Submit\\"[39m[33m>[39m[0m
+[0m [90m 10 | [39m    [33m<[39m[33mscript[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m  6 | [39m  [33m<[39m[33mbody[39m[33m>[39m[0m
+[0m [90m  7 | [39m    [33m<[39m[33mimg[39m src[33m=[39m[32m\\"\\"[39m alt[33m=[39m[32m\\"\\"[39m [33m/[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 | [39m    [33m<[39m[33miframe[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33miframe[39m[33m>[39m[0m
+[0m [90m    | [39m            [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m  9 | [39m    [33m<[39m[33minput[39m type[33m=[39m[32m\\"image\\"[39m src[33m=[39m[32m\\"\\"[39m alt[33m=[39m[32m\\"Submit\\"[39m[33m>[39m[0m
+[0m [90m 10 | [39m    [33m<[39m[33mscript[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33membed[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m  7 | [39m    [33m<[39m[33mimg[39m src[33m=[39m[32m\\"\\"[39m alt[33m=[39m[32m\\"\\"[39m [33m/[39m[33m>[39m[0m
+[0m [90m  8 | [39m    [33m<[39m[33miframe[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33miframe[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39m    [33m<[39m[33minput[39m type[33m=[39m[32m\\"image\\"[39m src[33m=[39m[32m\\"\\"[39m alt[33m=[39m[32m\\"Submit\\"[39m[33m>[39m[0m
+[0m [90m    | [39m                        [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 10 | [39m    [33m<[39m[33mscript[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33membed[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[0m
+[0m [90m 12 | [39m    [33m<[39m[33maudio[39m src[33m=[39m[32m\\"\\"[39m controls[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m  9 | [39m    [33m<[39m[33minput[39m type[33m=[39m[32m\\"image\\"[39m src[33m=[39m[32m\\"\\"[39m alt[33m=[39m[32m\\"Submit\\"[39m[33m>[39m[0m
+[0m [90m 10 | [39m    [33m<[39m[33mscript[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 11 | [39m    [33m<[39m[33membed[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[0m
+[0m [90m    | [39m           [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 12 | [39m    [33m<[39m[33maudio[39m src[33m=[39m[32m\\"\\"[39m controls[33m>[39m[0m
+[0m [90m 13 | [39m      [33mYour[39m browser does not support the audio element[33m.[39m[0m
+[0m [90m 14 | [39m    [33m<[39m[33m/[39m[33maudio[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 10 | [39m    [33m<[39m[33mscript[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33membed[39m src[33m=[39m[32m\\"\\"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 12 | [39m    [33m<[39m[33maudio[39m src[33m=[39m[32m\\"\\"[39m controls[33m>[39m[0m
+[0m [90m    | [39m           [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 13 | [39m      [33mYour[39m browser does not support the audio element[33m.[39m[0m
+[0m [90m 14 | [39m    [33m<[39m[33m/[39m[33maudio[39m[33m>[39m[0m
+[0m [90m 15 | [39m    [33m<[39m[33mvideo[39m src[33m=[39m[32m\\"\\"[39m controls[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 13 | [39m      [33mYour[39m browser does not support the audio element[33m.[39m[0m
+[0m [90m 14 | [39m    [33m<[39m[33m/[39m[33maudio[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 15 | [39m    [33m<[39m[33mvideo[39m src[33m=[39m[32m\\"\\"[39m controls[33m>[39m[0m
+[0m [90m    | [39m           [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 16 | [39m      [33m<[39m[33msource[39m src[33m=[39m[32m\\"\\"[39m type[33m=[39m[32m\\"video/mp4\\"[39m[33m>[39m[0m
+[0m [90m 17 | [39m      [33m<[39m[33mtrack[39m src[33m=[39m[32m\\"\\"[39m kind[33m=[39m[32m\\"subtitles\\"[39m srclang[33m=[39m[32m\\"en\\"[39m label[33m=[39m[32m\\"English\\"[39m[33m>[39m[0m
+[0m [90m 18 | [39m      [33mYour[39m browser does not support the video tag[33m.[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 14 | [39m    [33m<[39m[33m/[39m[33maudio[39m[33m>[39m[0m
+[0m [90m 15 | [39m    [33m<[39m[33mvideo[39m src[33m=[39m[32m\\"\\"[39m controls[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 16 | [39m      [33m<[39m[33msource[39m src[33m=[39m[32m\\"\\"[39m type[33m=[39m[32m\\"video/mp4\\"[39m[33m>[39m[0m
+[0m [90m    | [39m              [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 17 | [39m      [33m<[39m[33mtrack[39m src[33m=[39m[32m\\"\\"[39m kind[33m=[39m[32m\\"subtitles\\"[39m srclang[33m=[39m[32m\\"en\\"[39m label[33m=[39m[32m\\"English\\"[39m[33m>[39m[0m
+[0m [90m 18 | [39m      [33mYour[39m browser does not support the video tag[33m.[39m[0m
+[0m [90m 19 | [39m    [33m<[39m[33m/[39m[33mvideo[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 15 | [39m    [33m<[39m[33mvideo[39m src[33m=[39m[32m\\"\\"[39m controls[33m>[39m[0m
+[0m [90m 16 | [39m      [33m<[39m[33msource[39m src[33m=[39m[32m\\"\\"[39m type[33m=[39m[32m\\"video/mp4\\"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 17 | [39m      [33m<[39m[33mtrack[39m src[33m=[39m[32m\\"\\"[39m kind[33m=[39m[32m\\"subtitles\\"[39m srclang[33m=[39m[32m\\"en\\"[39m label[33m=[39m[32m\\"English\\"[39m[33m>[39m[0m
+[0m [90m    | [39m             [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 18 | [39m      [33mYour[39m browser does not support the video tag[33m.[39m[0m
+[0m [90m 19 | [39m    [33m<[39m[33m/[39m[33mvideo[39m[33m>[39m[0m
+[0m [90m 20 | [39m  [33m<[39m[33m/[39m[33mbody[39m[33m>[39m[0m",
       "
 ",
     ],
@@ -53,13 +259,101 @@ exports[`src-not-empty tests/rules/src-not-empty/error-no-src-attr.html 1`] = `
 ",
     ],
     Array [
-      "[101m[html-lint] 1 error in tests/rules/src-not-empty/error-no-src-attr.html[49m",
+      "[101m[html-lint] 8 errors in tests/rules/src-not-empty/error-no-src-attr.html[49m",
     ],
     Array [
       "[90msrc-not-empty: src attribute should not be empty.[39m
-[0m [90m 1 | [39m[33m<[39m[33m![39m[33m--[39m [36mthis[39m is a test [33m--[39m[33m>[39m[0m
-[0m[31m[1m>[22m[39m[90m 2 | [39m[33m<[39m[33m![39m[33mDOCTYPE[39m html[33m>[39m[33m<[39m[33mhtml[39m[33m>[39m[33m<[39m[33mhead[39m[33m>[39m[33m<[39m[33mtitle[39m[33m>[39mtitle[33m<[39m[33m/[39m[33mtitle[39m[33m>[39m[33m<[39m[35m/head><body><img alt=\\"alt\\" /[39m[33m>[39m[33m<[39m[33m/[39m[33mbody[39m[33m>[39m[33m<[39m[33m/[39m[33mhtml[39m[33m>[39m[0m
-[0m [90m   | [39m                                                            [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m",
+[0m [90m  6 | [39m  [33m<[39m[33m/[39m[33mhead[39m[33m>[39m[0m
+[0m [90m  7 | [39m  [33m<[39m[33mbody[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  8 | [39m    [33m<[39m[33mimg[39m alt[33m=[39m[32m\\"\\"[39m [33m/[39m[33m>[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m  9 | [39m    [33m<[39m[33miframe[39m[33m>[39m[33m<[39m[33m/[39m[33miframe[39m[33m>[39m[0m
+[0m [90m 10 | [39m    [33m<[39m[33minput[39m type[33m=[39m[32m\\"image\\"[39m  alt[33m=[39m[32m\\"Submit\\"[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33mscript[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m  7 | [39m  [33m<[39m[33mbody[39m[33m>[39m[0m
+[0m [90m  8 | [39m    [33m<[39m[33mimg[39m alt[33m=[39m[32m\\"\\"[39m [33m/[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m  9 | [39m    [33m<[39m[33miframe[39m[33m>[39m[33m<[39m[33m/[39m[33miframe[39m[33m>[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 10 | [39m    [33m<[39m[33minput[39m type[33m=[39m[32m\\"image\\"[39m  alt[33m=[39m[32m\\"Submit\\"[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33mscript[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m
+[0m [90m 12 | [39m    [33m<[39m[33membed[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m  8 | [39m    [33m<[39m[33mimg[39m alt[33m=[39m[32m\\"\\"[39m [33m/[39m[33m>[39m[0m
+[0m [90m  9 | [39m    [33m<[39m[33miframe[39m[33m>[39m[33m<[39m[33m/[39m[33miframe[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 10 | [39m    [33m<[39m[33minput[39m type[33m=[39m[32m\\"image\\"[39m  alt[33m=[39m[32m\\"Submit\\"[39m[33m>[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33mscript[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m
+[0m [90m 12 | [39m    [33m<[39m[33membed[39m[33m>[39m[0m
+[0m [90m 13 | [39m    [33m<[39m[33maudio[39m controls[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 10 | [39m    [33m<[39m[33minput[39m type[33m=[39m[32m\\"image\\"[39m  alt[33m=[39m[32m\\"Submit\\"[39m[33m>[39m[0m
+[0m [90m 11 | [39m    [33m<[39m[33mscript[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 12 | [39m    [33m<[39m[33membed[39m[33m>[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 13 | [39m    [33m<[39m[33maudio[39m controls[33m>[39m[0m
+[0m [90m 14 | [39m      [33mYour[39m browser does not support the audio element[33m.[39m[0m
+[0m [90m 15 | [39m    [33m<[39m[33m/[39m[33maudio[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 11 | [39m    [33m<[39m[33mscript[39m[33m>[39m[33m<[39m[33m/[39m[33mscript[39m[33m>[39m[0m
+[0m [90m 12 | [39m    [33m<[39m[33membed[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 13 | [39m    [33m<[39m[33maudio[39m controls[33m>[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 14 | [39m      [33mYour[39m browser does not support the audio element[33m.[39m[0m
+[0m [90m 15 | [39m    [33m<[39m[33m/[39m[33maudio[39m[33m>[39m[0m
+[0m [90m 16 | [39m    [33m<[39m[33mvideo[39m controls[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 14 | [39m      [33mYour[39m browser does not support the audio element[33m.[39m[0m
+[0m [90m 15 | [39m    [33m<[39m[33m/[39m[33maudio[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 16 | [39m    [33m<[39m[33mvideo[39m controls[33m>[39m[0m
+[0m [90m    | [39m    [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 17 | [39m      [33m<[39m[33msource[39m type[33m=[39m[32m\\"video/mp4\\"[39m[33m>[39m[0m
+[0m [90m 18 | [39m      [33m<[39m[33mtrack[39m kind[33m=[39m[32m\\"subtitles\\"[39m srclang[33m=[39m[32m\\"en\\"[39m label[33m=[39m[32m\\"English\\"[39m[33m>[39m[0m
+[0m [90m 19 | [39m      [33mYour[39m browser does not support the video tag[33m.[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 15 | [39m    [33m<[39m[33m/[39m[33maudio[39m[33m>[39m[0m
+[0m [90m 16 | [39m    [33m<[39m[33mvideo[39m controls[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 17 | [39m      [33m<[39m[33msource[39m type[33m=[39m[32m\\"video/mp4\\"[39m[33m>[39m[0m
+[0m [90m    | [39m      [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 18 | [39m      [33m<[39m[33mtrack[39m kind[33m=[39m[32m\\"subtitles\\"[39m srclang[33m=[39m[32m\\"en\\"[39m label[33m=[39m[32m\\"English\\"[39m[33m>[39m[0m
+[0m [90m 19 | [39m      [33mYour[39m browser does not support the video tag[33m.[39m[0m
+[0m [90m 20 | [39m    [33m<[39m[33m/[39m[33mvideo[39m[33m>[39m[0m",
+      "
+",
+    ],
+    Array [
+      "[90msrc-not-empty: src attribute should not be empty.[39m
+[0m [90m 16 | [39m    [33m<[39m[33mvideo[39m controls[33m>[39m[0m
+[0m [90m 17 | [39m      [33m<[39m[33msource[39m type[33m=[39m[32m\\"video/mp4\\"[39m[33m>[39m[0m
+[0m[31m[1m>[22m[39m[90m 18 | [39m      [33m<[39m[33mtrack[39m kind[33m=[39m[32m\\"subtitles\\"[39m srclang[33m=[39m[32m\\"en\\"[39m label[33m=[39m[32m\\"English\\"[39m[33m>[39m[0m
+[0m [90m    | [39m      [31m[1m^[22m[39m [31m[1msrc attribute should not be empty.[22m[39m[0m
+[0m [90m 19 | [39m      [33mYour[39m browser does not support the video tag[33m.[39m[0m
+[0m [90m 20 | [39m    [33m<[39m[33m/[39m[33mvideo[39m[33m>[39m[0m
+[0m [90m 21 | [39m  [33m<[39m[33m/[39m[33mbody[39m[33m>[39m[0m",
       "
 ",
     ],
@@ -69,6 +363,62 @@ exports[`src-not-empty tests/rules/src-not-empty/error-no-src-attr.html 1`] = `
     ],
   ],
   "results": Array [
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
+    Object {
+      "type": "return",
+      "value": undefined,
+    },
     Object {
       "type": "return",
       "value": undefined,
