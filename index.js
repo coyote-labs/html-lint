@@ -67,7 +67,8 @@ const htmlLint = async function(htmlFilesGlob, configPath) {
     };
   });
 
-  const chunks = chunk(htmlFiles, physicalCpuCount);
+  const groups = Math.ceil(htmlFiles.length / physicalCpuCount);
+  const chunks = chunk(htmlFiles, groups);
 
   const lintPromises = chunks.map((fileGroup) => {
     return pool.exec('linter', [fileGroup, runTimeArgs]);
