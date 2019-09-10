@@ -6,8 +6,7 @@
   "scripts": {
     "clean": "rm -rf dist",
     "build": "npm run clean && tsc",
-    "replaceImgPath": "sed -i 's/.\\/_media\\/demo.png/.\\/docs\\/_media\\/demo.png/g' README.md",
-    "prepare": "npm run build && cp docs/README.md . && npm run replaceImgPath",
+    "prepare": "npm run build && node copyReadme",
     "eslint": "node_modules/.bin/eslint lib/**/**/*.ts bin/*.js index.js",
     "test": "npm run eslint && npm run build && jest",
     "serve": "node_modules/.bin/docsify serve docs"

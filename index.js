@@ -30,6 +30,9 @@ const linter = async(files, runTimeArgs) => {
         name: file.name,
         contents: file.contents.trim()
       },
+      generatorOptions: {
+        scopedLocals: true
+      },
       runtime: runTimeArgs
     }).process(file.contents.trim());
   });
