@@ -1,5 +1,7 @@
 # html-lint
 
+[![npm version](https://badge.fury.io/js/%40coyote-labs%2Fhtml-lint.svg)](https://badge.fury.io/js/%40coyote-labs%2Fhtml-lint) [![Build Status](https://github.com/coyote-labs/html-lint/workflows/Build/badge.svg)](https://github.com/coyote-labs/html-lint/) 
+
 > A meaningful static analysis tool for HTML
 
 html-lint is a linter for HTML files. It uses
