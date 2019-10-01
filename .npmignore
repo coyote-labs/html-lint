@@ -2,3 +2,10 @@ tests/
 docs/
 lib/**/*.ts
 .github
+copyReadme.js
+result.png
+.eslintignore
+.eslintrc.js
+.travis.yml
+*error.log
+tsconfig.json
