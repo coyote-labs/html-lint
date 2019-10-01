@@ -9,7 +9,8 @@
     "prepare": "npm run build && node copyReadme",
     "eslint": "node_modules/.bin/eslint lib/**/**/*.ts bin/*.js index.js",
     "test": "npm run eslint && npm run build && jest",
-    "serve": "node_modules/.bin/docsify serve docs"
+    "serve": "node_modules/.bin/docsify serve docs",
+    "publishNPM": "npm publish --verbose  --access public"
   },
   "bin": "bin/html-lint.js",
   "dependencies": {
