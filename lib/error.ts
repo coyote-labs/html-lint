@@ -70,7 +70,7 @@ const errorLevelMap: ErrorLevelMapping = {
 export function processFileLevelConfig(
   { violations, htmlLintConfig }: { violations: any; htmlLintConfig: any }
 ): void {
-  const files = Object.keys(violations);
+  const files = Object.keys(violations || []);
   files.forEach((file) => {
     const fileViolations = violations[file];
 
@@ -116,7 +116,7 @@ export function processFileLevelConfig(
 export function printViolations(
   { violations }: { violations: any }
 ): void {
-  const files = Object.keys(violations);
+  const files = Object.keys(violations || {});
   files.forEach((file) => {
     const fileViolations = violations[file];
 
@@ -140,7 +140,7 @@ export function handleExit(
   { violations }: { violations: any },
   pool: any
 ): void {
-  const files: Array<string> = Object.keys(violations);
+  const files: Array<string> = Object.keys(violations || {});
   const shouldThrow: boolean = files.reduce((accummulator: boolean, file: string) => {
     if (violations[file].errors.length) {
       return true;

@@ -3,6 +3,7 @@ require('v8-compile-cache');
 const fs = require('fs');
 const path = require('path');
 
+const chalk = require('chalk');
 const physicalCpuCount = require('physical-cpu-count')
 const reshape = require('reshape');
 const glob = require('glob');
@@ -59,6 +60,16 @@ const htmlLint = async function(htmlFilesGlob, configPath) {
     console.error(message);
     printUsage();
   }
+
+  htmlFiles = htmlFiles.filter((file) => {
+    // reshape takes too long to process large files.
+    // Avoid this for now by not processing files above 200kb.
+    if (fs.statSync(file).size > 200 * 1000) {
+      console.warn(chalk.yellow(`Not processing ${file} as it's too large.`));
+    } else {
+      return true;
+    }
+  });
 
   htmlFiles = htmlFiles.map((file) => {
     return {
