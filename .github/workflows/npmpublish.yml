@@ -24,6 +24,8 @@ jobs:
         npm install
         npm run build --if-present
         npm test
+      env:
+        FORCE_COLOR: 2
     - name: npm publish
       run: |
         npm config set //registry.npmjs.org/:_authToken=$NODE_AUTH_TOKEN
