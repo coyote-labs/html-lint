@@ -20,7 +20,7 @@
     "glob": "^7.1.4",
     "lodash.chunk": "^4.2.0",
     "lodash.merge": "^4.6.2",
-    "minimist": "^1.2.0",
+    "minimist": "^1.2.3",
     "physical-cpu-count": "^2.0.0",
     "promise.allsettled": "^1.0.1",
     "reshape": "^1.0.1",
